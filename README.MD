@@ -10,5 +10,3 @@ Outside of a container, assuming you have a KDE development environment set up, 
 ```
 cmake -B build/ -DCMAKE_INSTALL_PREFIX=~/kde/usr && cmake --build build/ -v && cmake --install build/
 ```
-
-
