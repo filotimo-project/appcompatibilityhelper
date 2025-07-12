@@ -13,7 +13,7 @@ build: build-container
     
     podman run --rm \
         --userns=keep-id \
-        --volume "$(pwd):/workspace" \
+        --volume "$(pwd):/workspace:Z" \
         --workdir /workspace \
         {{image_name}} \
         bash -c '
@@ -33,12 +33,16 @@ install: build
 
     podman run --rm \
         --userns=keep-id \
-        --volume "$(pwd):/workspace" \
+        --volume "$(pwd):/workspace:Z" \
         --workdir /workspace/build \
         {{image_name}} \
         bash -c '
-            # Install to host system
-            echo "Installing to host system..."
+            # Install to prefix directory
+            echo "Installing to prefix directory..."
             mkdir -p /workspace/build/prefix
             make install DESTDIR=/workspace/build/prefix
         '
+
+    echo "Copying files to system directories..."
+    sudo ostree admin unlock || true
+    sudo cp -r build/prefix/usr/* /usr/
