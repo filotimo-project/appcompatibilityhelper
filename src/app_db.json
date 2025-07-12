@@ -1,0 +1,1417 @@
+[
+    {
+        "regex": {
+            "windows": "firefox\\s+setup.*.(exe|msi)",
+            "linux": "firefox.*"
+        },
+        "name": "Mozilla Firefox",
+        "flatpak": { "remote": "flathub", "id": "org.mozilla.firefox" },
+        "desktopLauncher": "firefox.desktop"
+    },
+    {
+        "regex": {
+            "windows": "(eie11|ie11).*.(exe|msi)"
+        },
+        "name": "Internet Explorer",
+        "flatpak": { "remote": "flathub", "id": "com.microsoft.Edge" },
+        "desktopLauncher": "microsoft-edge.desktop",
+        "alternative": {
+            "name": "Microsoft Edge"
+        }
+    },
+    {
+        "regex": {
+            "windows": "chrome.*.exe"
+        },
+        "name": "Google Chrome website",
+        "webLink": { "href": "https://www.google.com/chrome/" },
+        "mainMessage": "You can download Google Chrome (.deb package) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "googleearthprowin.*.exe"
+        },
+        "name": "Google Earth website",
+        "webLink": { "href": "https://www.google.com/earth/about/versions/#download-pro" },
+        "mainMessage": "You can download Google Earth Pro (.deb package) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+             "windows": "bravebrowsersetup.*.exe"
+        },
+        "name": "Brave Browser",
+        "flatpak": { "remote": "flathub", "id": "com.brave.Browser" },
+        "desktopLauncher": "brave-browser.desktop"
+    },
+    {
+        "regex": {
+             "windows": "microsoftedgesetup.*.(exe|msi)"
+        },
+        "name": "Microsoft Edge",
+        "flatpak": { "remote": "flathub", "id": "com.microsoft.Edge" },
+        "desktopLauncher": "microsoft-edge.desktop"
+    },
+    {
+        "regex": {
+             "windows": "opera(.*.|)setup.*.(exe|msi)"
+        },
+        "name": "Opera",
+        "flatpak": { "remote": "flathub", "id": "com.opera.Opera" },
+        "desktopLauncher": "opera.desktop"
+    },
+    {
+        "regex": {
+             "windows": "vivaldi.*.exe"
+        },
+        "name": "Vivaldi Browser",
+        "flatpak": { "remote": "flathub", "id": "com.vivaldi.Vivaldi" },
+        "desktopLauncher": "vivaldi-stable.desktop"
+    },
+    {
+        "regex": {
+             "windows": "librewolf.*.exe"
+        },
+        "name": "LibreWolf",
+        "flatpak": { "remote": "flathub", "id": "io.gitlab.librewolf-community" },
+        "desktopLauncher": "librewolf.desktop"
+    },
+    {
+        "regex": {
+             "windows": "zen.installer.*.exe"
+        },
+        "name": "Zen Browser",
+        "flatpak": { "remote": "flathub", "id": "app.zen_browser.zen" }
+    },
+    {
+        "regex": {
+            "windows": "arcinstaller.*.exe"
+        },
+        "name": "Arc Browser",
+        "flatpak": { "remote": "flathub", "id": "app.zen_browser.zen" },
+        "alternative": {
+            "name": "Zen Browser"
+        }
+    },
+    {
+        "regex": {
+             "windows": "waterfox.*.setup.*.exe"
+        },
+        "name": "Waterfox",
+        "flatpak": { "remote": "flathub", "id": "net.waterfox.waterfox" }
+    },
+    {
+        "regex": {
+             "windows": "ungoogled-chromium.*.installer.*.exe"
+        },
+        "name": "Ungoogled Chromium",
+        "flatpak": { "remote": "flathub", "id": "io.github.ungoogled_software.ungoogled_chromium" }
+    },
+    {
+        "regex": {
+             "windows": "floorp.*.installer.*.exe"
+        },
+        "name": "Floorp",
+        "flatpak": { "remote": "flathub", "id": "one.ablaze.floorp" },
+        "desktopLauncher": "floorp.desktop"
+    },
+    {
+        "regex": {
+             "windows": "mullvad-browser-windows.*.exe"
+        },
+        "name": "Mullvad Browser",
+        "flatpak": { "remote": "flathub", "id": "net.mullvad.MullvadBrowser" },
+        "desktopLauncher": "mullvad-browser.desktop"
+    },
+    {
+        "regex": {
+            "windows": "thunderbird\\s+setup.*.(exe|msi)"
+        },
+        "name": "Thunderbird Mail",
+        "desktopLauncher": "thunderbird.desktop"
+    },
+    {
+        "regex": {
+             "windows": "nextcloud.*.msi"
+        },
+        "name": "Nextcloud",
+        "flatpak": { "remote": "flathub", "id": "com.nextcloud.desktopclient.nextcloud" },
+        "desktopLauncher": "com.nextcloud.desktopclient.nextcloud.desktop"
+    },
+    {
+        "regex": {
+            "windows": "dropbox.*.exe"
+        },
+        "name": "Dropbox website",
+        "webLink": { "href": "https://www.dropbox.com/install?os=lnx" },
+        "mainMessage": "You can download Dropbox (Ubuntu package) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+             "windows": "skype.*.exe",
+             "linux": "skype.*"
+        },
+        "name": "Skype",
+        "flatpak": { "remote": "flathub", "id": "com.skype.Client" },
+        "desktopLauncher": "skype_skypeforlinux.desktop"
+    },
+    {
+        "regex": {
+            "windows": "googledrivesetup.*.exe"
+        },
+        "name": "Google Drive",
+        "desktopLauncher": "gnome-online-accounts-panel.desktop",
+        "alternative": {
+            "name": "Online Accounts"
+        }
+    },
+    {
+        "regex": {
+            "windows": "mpc-hc.*.exe"
+        },
+        "name": "MPC-HC",
+        "desktopLauncher": "org.gnome.Totem.desktop",
+        "alternative": {
+            "name": "Videos"
+        }
+    },
+    {
+        "regex": {
+            "windows": "reader.*.exe"
+        },
+        "name": "Adobe Reader",
+        "desktopLauncher": "org.gnome.Evince.desktop",
+        "alternative": {
+            "name": "Document Viewer"
+        }
+    },
+    {
+        "regex": {
+            "windows": "acrordr.*.exe"
+        },
+        "name": "Adobe Acrobat Reader",
+        "desktopLauncher": "org.gnome.Evince.desktop",
+        "alternative": {
+            "name": "Document Viewer"
+        }
+    },
+    {
+        "regex": {
+            "windows": "sumatrapdf.*.install.*.exe"
+        },
+        "name": "Sumatra PDF",
+        "desktopLauncher": "org.gnome.Evince.desktop",
+        "alternative": {
+            "name": "Document Viewer"
+        }
+    },
+    {
+        "regex": {
+            "windows": "foxit-pdf-reader.*.exe"
+        },
+        "name": "Foxit PDF Reader",
+        "desktopLauncher": "org.gnome.Evince.desktop",
+        "alternative": {
+            "name": "Document Viewer"
+        }
+    },
+    {
+        "regex": {
+            "windows": "nitro_pro.*.(exe|msi)"
+        },
+        "name": "Nitro PDF",
+        "desktopLauncher": "libreoffice-draw.desktop",
+        "alternative": {
+            "name": "LibreOffice Draw"
+        }
+    },
+    {
+        "regex": {
+            "windows": "spotifysetup.*.exe"
+        },
+        "name": "Spotify",
+        "flatpak": { "remote": "flathub", "id": "com.spotify.Client" },
+        "desktopLauncher": "spotify_spotify.desktop"
+    },
+    {
+        "regex": {
+            "windows": "itunes.*setup.exe"
+        },
+        "name": "Apple iTunes",
+        "flatpak": { "remote": "flathub", "id": "sh.cider.Cider" },
+        "desktopLauncher": "cider.desktop",
+        "alternative": {
+            "name": "Cider"
+        }
+    },
+    {
+        "regex": {
+            "windows": "paint.net.*.exe"
+        },
+        "name": "Paint.NET",
+        "flatpak": { "remote": "flathub", "id": "com.github.PintaProject.Pinta" },
+        "desktopLauncher": "pinta.desktop",
+        "alternative": {
+            "name": "Pinta"
+        }
+    },
+    {
+        "regex": {
+            "windows": "krita.*.setup.exe"
+        },
+        "name": "Krita",
+        "flatpak": { "remote": "flathub", "id": "org.kde.krita" },
+        "desktopLauncher": "org.kde.krita.desktop"
+    },
+    {
+        "regex": {
+            "windows": "sketchbook.*.exe"
+        },
+        "name": "Autodesk SketchBook",
+        "flatpak": { "remote": "flathub", "id": "org.kde.krita" },
+        "desktopLauncher": "org.kde.krita.desktop",
+        "alternative": {
+            "name": "Krita"
+        }
+    },
+    {
+        "regex": {
+            "windows": "flstudio.*.exe"
+        },
+        "name": "FL Studio",
+        "flatpak": { "remote": "flathub", "id": "io.lmms.LMMS" },
+        "desktopLauncher": "lmms.desktop",
+        "alternative": {
+            "name": "LMMS"
+        }
+    },
+    {
+        "regex": {
+            "windows": "ableton\\s+live.*.exe"
+        },
+        "name": "Ableton Live",
+        "flatpak": { "remote": "flathub", "id": "com.bitwig.BitwigStudio" },
+        "desktopLauncher": "bitwig-studio.desktop",
+        "alternative": {
+            "name": "Bitwig Studio"
+        }
+    },
+    {
+        "regex": {
+            "windows": "bitwig\\s+studio.*.(exe|msi)",
+            "linux": "bitwig-studio.*"
+        },
+        "name": "Bitwig Studio",
+        "flatpak": { "remote": "flathub", "id": "com.bitwig.BitwigStudio" },
+        "desktopLauncher": "bitwig-studio.desktop"
+    },
+    {
+        "regex": {
+            "windows": "epicinstaller.*.msi"
+        },
+        "name": "Epic Games Store",
+        "flatpak": { "remote": "flathub", "id": "com.heroicgameslauncher.hgl" },
+        "desktopLauncher": "com.heroicgameslauncher.hgl.desktop",
+        "alternative": {
+            "name": "Heroic Games Launcher"
+        }
+    },
+    {
+        "regex": {
+            "windows": "gog_galaxy.*.exe"
+        },
+        "name": "GOG Galaxy",
+        "flatpak": { "remote": "flathub", "id": "com.heroicgameslauncher.hgl" },
+        "desktopLauncher": "com.heroicgameslauncher.hgl.desktop",
+        "alternative": {
+            "name": "Heroic Games Launcher"
+        }
+    },
+    {
+        "regex": {
+            "windows": "battle.net.*.exe"
+        },
+        "name": "Battle.net",
+        "desktopLauncher": "net.lutris.Lutris.desktop",
+        "alternative": {
+            "name": "Lutris"
+        }
+    },
+    {
+        "regex": {
+            "windows": "bethesdanetlauncher_setup.*.exe"
+        },
+        "name": "Bethesda Launcher",
+        "desktopLauncher": "net.lutris.Lutris.desktop",
+        "alternative": {
+            "name": "Lutris"
+        }
+    },
+    {
+        "regex": {
+            "windows": "originthinsetup.*.exe"
+        },
+        "name": "Origin",
+        "desktopLauncher": "net.lutris.Lutris.desktop",
+        "alternative": {
+            "name": "Lutris"
+        }
+    },
+    {
+        "regex": {
+            "windows": "ubisoftconnectinstaller.*.exe"
+        },
+        "name": "Ubisoft Connect",
+        "desktopLauncher": "net.lutris.Lutris.desktop",
+        "alternative": {
+            "name": "Lutris"
+        }
+    },
+    {
+        "regex": {
+            "windows": "itch-setup.*.exe"
+        },
+        "name": "Itch website",
+        "webLink": { "href": "https://itch.io/app/" },
+        "mainMessage": "You can download Itch (Linux package) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "affinity-photo.*.exe"
+        },
+        "name": "Affinity Photo",
+        "flatpak": { "remote": "flathub", "id": "org.gimp.GIMP" },
+        "desktopLauncher": "gimp.desktop",
+        "alternative": {
+            "name": "GNU Image Manipulation Program"
+        }
+    },
+    {
+        "regex": {
+            "windows": "inkscape.*.(exe|msi)"
+        },
+        "name": "Inkscape",
+        "flatpak": { "remote": "flathub", "id": "org.inkscape.Inkscape" },
+        "desktopLauncher": "org.inkscape.Inkscape.desktop"
+    },
+    {
+        "regex": {
+            "windows": "affinity-designer.*.exe"
+        },
+        "name": "Affinity Designer",
+        "flatpak": { "remote": "flathub", "id": "org.inkscape.Inkscape" },
+        "desktopLauncher": "org.inkscape.Inkscape.desktop",
+        "alternative": {
+            "name": "Inkscape"
+        }
+    },
+    {
+        "regex": {
+            "windows": "affinity-publisher.*.exe"
+        },
+        "name": "Affinity Publisher",
+        "desktopLauncher": "libreoffice-draw.desktop",
+        "alternative": {
+            "name": "LibreOffice Draw"
+        }
+    },
+    {
+        "regex": {
+            "windows": "cinema4d.*.exe"
+        },
+        "name": "Cinema 4D",
+        "flatpak": { "remote": "flathub", "id": "org.blender.Blender" },
+        "desktopLauncher": "blender.desktop",
+        "alternative": {
+            "name": "Blender"
+        }
+    },
+    {
+        "regex": {
+             "windows": "steamsetup.*.exe",
+             "linux": "steam.*"
+        },
+        "name": "Steam",
+        "apt": "steam-installer"
+    },
+    {
+        "regex": {
+            "windows": "whatsapp.*.exe"
+        },
+        "name": "WhatsApp",
+        "webLink": { "href": "https://web.whatsapp.com/" },
+        "mainMessage": "You can use WhatsApp on the web"
+    },
+    {
+        "regex": {
+            "windows": "notion.*.setup.*.exe"
+        },
+        "name": "Notion",
+        "webLink": { "href": "https://www.notion.so/login" },
+        "mainMessage": "You can use Notion on the web"
+    },
+    {
+        "regex": {
+            "windows": "evernote-latest.*.exe"
+        },
+        "name": "Evernote",
+        "webLink": { "href": "https://accounts.evernote.com/login" },
+        "mainMessage": "You can use Evernote on the web"
+    },
+    {
+        "regex": {
+            "windows": "canva.*.setup.*.exe"
+        },
+        "name": "Canva",
+        "webLink": { "href": "https://www.canva.com/" },
+        "mainMessage": "You can use Canva on the web"
+    },
+    {
+        "regex": {
+             "windows": "kindleforpc.*.exe"
+        },
+        "name": "Amazon Kindle",
+        "webLink": { "href": "https://read.amazon.com/" },
+        "mainMessage": "You can use Amazon Kindle on the web"
+    },
+    {
+        "regex": {
+            "windows": "vlc.*.(exe|msi)",
+            "linux": "vlc.*"
+        },
+        "name": "VLC",
+        "apt": "vlc",
+        "flatpak": { "remote": "flathub", "id": "org.videolan.VLC" },
+        "desktopLauncher": "vlc.desktop"
+    },
+    {
+        "regex": {
+            "windows": "1passwordsetup.*.exe"
+        },
+        "name": "1Password website",
+        "webLink": { "href": "https://1password.com/downloads/linux/" },
+        "mainMessage": "You can download 1Password (.deb package) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "lastpassinstaller.*.exe"
+        },
+        "name": "LastPass website",
+        "webLink": { "href": "https://lastpass.com/lplinux.php" },
+        "mainMessage": "You can install LastPass (Linux installer) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "bitwarden.*.exe",
+            "linux": "bitwarden.*"
+        },
+        "name": "Bitwarden",
+        "flatpak": { "remote": "flathub", "id": "com.bitwarden.desktop" },
+        "desktopLauncher": "bitwarden.desktop"
+    },
+    {
+        "regex": {
+            "windows": "keepassxc.*.msi"
+        },
+        "name": "KeePassXC",
+        "apt": "keepassxc",
+        "flatpak": { "remote": "flathub", "id": "org.keepassxc.KeePassXC" },
+        "desktopLauncher": "org.keepassxc.KeePassXC.desktop"
+    },
+    {
+        "regex": {
+            "windows": "keepass.*.setup.*.exe"
+        },
+        "name": "KeePass",
+        "apt": "keepassxc",
+        "flatpak": { "remote": "flathub", "id": "org.keepassxc.KeePassXC" },
+        "desktopLauncher": "org.keepassxc.KeePassXC.desktop",
+        "alternative": {
+            "name": "KeePassXC"
+        }
+    },
+    {
+        "regex": {
+            "windows": "anytype.*.setup.*.exe"
+        },
+        "name": "Anytype",
+        "flatpak": { "remote": "flathub", "id": "io.anytype.anytype" },
+        "desktopLauncher": "anytype.desktop"
+    },
+    {
+        "regex": {
+            "windows": "filezilla.*.exe"
+        },
+        "name": "FileZilla",
+        "apt": "filezilla",
+        "flatpak": { "remote": "flathub", "id": "org.filezillaproject.Filezilla" },
+        "desktopLauncher": "filezilla.desktop"
+    },
+    {
+        "regex": {
+            "windows": "kodi.*.exe"
+        },
+        "name": "Kodi",
+        "flatpak": { "remote": "flathub", "id": "tv.kodi.Kodi" },
+        "desktopLauncher": "kodi.desktop"
+    },
+    {
+        "regex": {
+            "windows": "stremiosetup.*.exe",
+            "linux": "stremio.*"
+        },
+        "name": "Stremio",
+        "flatpak": { "remote": "flathub", "id": "com.stremio.Stremio" },
+        "desktopLauncher": "smartcode-stremio.desktop"
+    },
+    {
+        "regex": {
+            "windows": "draw.io.*.windows-installer.*.exe"
+        },
+        "name": "draw.io",
+        "flatpak": { "remote": "flathub", "id": "com.jgraph.drawio.desktop" },
+        "desktopLauncher": "drawio.desktop"
+    },
+    {
+        "regex": {
+            "windows": "(utorrent|utweb).*.exe"
+        },
+        "name": "µTorrent",
+        "flatpak": { "remote": "flathub", "id": "com.transmissionbt.Transmission" },
+        "apt": "transmission-gtk",
+        "desktopLauncher": "transmission-gtk.desktop",
+        "alternative": {
+            "name": "Transmission"
+        }
+    },
+    {
+        "regex": {
+            "windows": "(bittorrent|btweb).*.exe"
+        },
+        "name": "BitTorrent",
+        "flatpak": { "remote": "flathub", "id": "com.transmissionbt.Transmission" },
+        "apt": "transmission-gtk",
+        "desktopLauncher": "transmission-gtk.desktop",
+        "alternative": {
+            "name": "Transmission"
+        }
+    },
+    {
+        "regex": {
+            "windows": "qbittorrent.*.setup.*.exe"
+        },
+        "name": "qBittorrent",
+        "flatpak": { "remote": "flathub", "id": "org.qbittorrent.qBittorrent" },
+        "desktopLauncher": "org.qbittorrent.qBittorrent.desktop"
+    },
+    {
+        "regex": {
+            "windows": "calibre.*.msi"
+        },
+        "name": "Calibre",
+        "flatpak": { "remote": "flathub", "id": "com.calibre_ebook.calibre" },
+        "desktopLauncher": "calibre-gui.desktop"
+    },
+    {
+        "regex": {
+            "windows": "obsidian.*.exe"
+        },
+        "name": "Obsidian",
+        "flatpak": { "remote": "flathub", "id": "md.obsidian.Obsidian" },
+        "desktopLauncher": "obsidian.desktop"
+    },
+    {
+        "regex": {
+            "windows": "joplin-setup.*.exe"
+        },
+        "name": "Joplin",
+        "flatpak": { "remote": "flathub", "id": "net.cozic.joplin_desktop" }
+    },
+    {
+        "regex": {
+            "windows": "tsetup.*.exe"
+        },
+        "name": "Telegram",
+        "flatpak": { "remote": "flathub", "id": "org.telegram.desktop" },
+        "desktopLauncher": "telegramdesktop.desktop"
+    },
+    {
+        "regex": {
+            "windows": "signalsetup.*.exe"
+        },
+        "name": "Signal",
+        "flatpak": { "remote": "flathub", "id": "org.signal.Signal" },
+        "desktopLauncher": "signal-desktop.desktop"
+    },
+    {
+        "regex": {
+            "windows": "discordsetup.*.exe",
+            "linux": "discord.*"
+        },
+        "name": "Discord",
+        "flatpak": { "remote": "flathub", "id": "com.discordapp.Discord" },
+        "desktopLauncher": "discord.desktop"
+    },
+    {
+        "regex": {
+            "windows": "element.*.setup.*.exe"
+        },
+        "name": "Element",
+        "flatpak": { "remote": "flathub", "id": "im.riot.Riot" },
+        "desktopLauncher": "element-desktop.desktop"
+    },
+    {
+        "regex": {
+            "windows": "teamviewer_setup.*.exe"
+        },
+        "name": "TeamViewer website",
+        "webLink": { "href": "https://www.teamviewer.com/download/linux/" },
+        "mainMessage": "You can download TeamViewer (.deb package) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+             "windows": "zoom.*.(exe|msi)",
+             "linux": "zoom.*"
+        },
+        "name": "Zoom",
+        "flatpak": { "remote": "flathub", "id": "us.zoom.Zoom" },
+        "desktopLauncher": "us.zoom.Zoom.desktop"
+    },
+    {
+        "regex": {
+            "windows": "slacksetup.*.exe",
+            "linux": "slack-desktop.*"
+        },
+        "name": "Slack",
+        "flatpak": { "remote": "flathub", "id": "com.slack.Slack" },
+        "desktopLauncher": "slack.desktop"
+    },
+    {
+        "regex": {
+             "windows": "anydesk.*.(exe|msi)",
+             "linux": "anydesk.*"
+        },
+        "name": "AnyDesk",
+        "flatpak": { "remote": "flathub", "id": "com.anydesk.Anydesk" },
+        "desktopLauncher": "anydesk.desktop"
+    },
+    {
+        "regex": {
+             "windows": "npp.*.(exe|msi)"
+        },
+        "name": "Notepad++",       
+        "flatpak": { "remote": "flathub", "id": "com.github.dail8859.NotepadNext" },
+        "desktopLauncher": "com.github.dail8859.NotepadNext.desktop",
+        "alternative": {
+            "name": "Notepad Next"
+        }
+    },
+    {
+        "regex": {
+            "windows": "geany.*.setup.*.exe"
+        },
+        "name": "Geany",
+        "apt": "geany"
+    },
+    {
+        "regex": {
+            "windows": "winrar.*.exe"
+        },
+        "name": "WinRAR",
+        "apt": "p7zip-rar",
+        "alternative": {
+            "name": ".rar file support"
+        }
+    },
+    {
+        "regex": {
+            "windows": "winzip.*.(exe|msi)"
+        },
+        "name": "WinZip",
+        "desktopLauncher": "org.gnome.FileRoller.desktop",
+        "alternative": {
+            "name": "Archive Manager"
+        }
+    },
+    {
+        "regex": {
+            "windows": "7z.*.(exe|msi)"
+        },
+        "name": "7-Zip",
+        "apt": "p7zip-full",
+        "alternative": {
+            "name": ".7z file support"
+        }
+    },
+    {
+        "regex": {
+            "windows": "putty(.*.installer|).*.(exe|msi)"
+        },
+        "name": "PuTTY",
+        "flatpak": { "remote": "flathub", "id": "uk.org.greenend.chiark.sgtatham.putty" },
+        "desktopLauncher": "uk.org.greenend.chiark.sgtatham.putty.desktop"
+    },
+    {
+        "regex": {
+             "windows": "minecraft.*.(exe|msi)",
+             "linux": "minecraft.*"
+        },
+        "name": "Minecraft",
+        "flatpak": { "remote": "flathub", "id": "com.mojang.Minecraft" },
+        "desktopLauncher": "minecraft-launcher.desktop"
+    },
+    {
+        "regex": {
+             "windows": "bleachbit.*.setup.*.exe"
+        },
+        "name": "BleachBit",
+        "apt": "bleachbit",
+        "flatpak": { "remote": "flathub", "id": "org.bleachbit.BleachBit" },
+        "desktopLauncher": "org.bleachbit.BleachBit.desktop"
+    },
+    {
+        "regex": {
+            "windows": "ccsetup.*.exe"
+        },
+        "name": "CCleaner",
+        "apt": "bleachbit",
+        "flatpak": { "remote": "flathub", "id": "org.bleachbit.BleachBit" },
+        "desktopLauncher": "org.bleachbit.BleachBit.desktop",
+        "alternative": {
+            "name": "BleachBit"
+        }
+    },
+    {
+        "regex": {
+            "windows": "windirstat.*.msi"
+        },
+        "name": "WinDirStat",
+        "desktopLauncher": "org.gnome.baobab.desktop",
+        "alternative": {
+            "name": "Disk Usage Analyzer"
+        }
+    },
+    {
+        "regex": {
+            "windows": "bluestacks.*.exe"
+        },
+        "name": "BlueStacks",
+        "webLink": { "href": "https://www.genymotion.com/product-desktop/download/" },
+        "mainMessage": "You can download Genymotion (Ubuntu package) for Zorin OS from the web",
+        "alternative": {
+            "name": "Genymotion Desktop"
+        }
+    },
+    {
+        "regex": {
+             "windows": "scratch.*.setup.*.(exe|msi)"
+        },
+        "name": "Scratch",
+        "flatpak": { "remote": "flathub", "id": "edu.mit.Scratch" },
+        "desktopLauncher": "scratch-desktop.desktop"
+    },
+    {
+        "regex": {
+            "windows": ".*distance.*windows_setup.exe"
+        },
+        "name": "Distance",
+        "steam": "233610",
+        "desktopLauncher": "steam.desktop",
+        "alternative": {
+            "name": "on Steam"
+        }
+    },
+    {
+        "regex": {
+            "windows": ".*league\\s+of\\s+legends.*.exe"
+        },
+        "name": "the League of Legends installer",
+        "mainMessage": "League of Legends is available on Lutris",
+        "desktopLauncher": "net.lutris.Lutris.desktop",
+        "alternative": {
+            "name": "Lutris"
+        }
+    },
+    {
+        "regex": {
+            "windows": "overwatch.*.exe"
+        },
+        "name": "the Overwatch installer",
+        "mainMessage": "Overwatch is available on Lutris",
+        "desktopLauncher": "net.lutris.Lutris.desktop",
+        "alternative": {
+            "name": "Lutris"
+        }
+    },
+    {
+        "regex": {
+            "windows": "warframe.*.msi"
+        },
+        "name": "the Warframe installer",
+        "mainMessage": "Warframe is available on Lutris",
+        "desktopLauncher": "net.lutris.Lutris.desktop",
+        "alternative": {
+            "name": "Lutris"
+        }
+    },
+    {
+        "regex": {
+            "windows": "world-of-warcraft.*.exe"
+        },
+        "name": "the World of Warcraft installer",
+        "mainMessage": "World of Warcraft is available on Lutris",
+        "desktopLauncher": "net.lutris.Lutris.desktop",
+        "alternative": {
+            "name": "Lutris"
+        }
+    },
+    {
+        "regex": {
+            "windows": "robloxplayerlauncher.*.exe"
+        },
+        "name": "Roblox Player Launcher",
+        "webLink": { "href": "https://sober.vinegarhq.org/" },
+        "mainMessage": "You can install Sober (Flatpak package) for Zorin OS",
+        "desktopLauncher": "org.vinegarhq.Sober.desktop",
+        "alternative": {
+            "name": "Sober"
+        }
+    },
+    {
+        "regex": {
+            "windows": "robloxstudiolauncher.*.exe"
+        },
+        "name": "Roblox Studio Launcher",
+        "webLink": { "href": "https://sober.vinegarhq.org/" },
+        "mainMessage": "You can install Sober (Flatpak package) for Zorin OS",
+        "desktopLauncher": "org.vinegarhq.Sober.desktop",
+        "alternative": {
+            "name": "Sober"
+        }
+    },
+    {
+        "regex": {
+            "windows": "razersynapseinstaller.*.exe"
+        },
+        "name": "Razer Synapse",
+        "flatpak": { "remote": "flathub", "id": "xyz.z3ntu.razergenie" },
+        "desktopLauncher": "xyz.z3ntu.razergenie.desktop",
+        "alternative": {
+            "name": "RazerGenie"
+        }
+    },
+    {
+        "regex": {
+             "windows": "todoist.*.exe"
+        },
+        "name": "Todoist",
+        "flatpak": { "remote": "flathub", "id": "com.todoist.Todoist" },
+        "desktopLauncher": "todoist_todoist.desktop"
+    },
+    {
+        "regex": {
+             "windows": "brackets.*.exe"
+        },
+        "name": "Brackets",
+        "flatpak": { "remote": "flathub", "id": "io.brackets.Brackets" },
+        "desktopLauncher": "io.brackets.Brackets.desktop"
+    },
+    {
+        "regex": {
+            "windows": "visualstudiosetup.*.exe"
+        },
+        "name": "Visual Studio",
+        "flatpak": { "remote": "flathub", "id": "com.jetbrains.Rider" },
+        "desktopLauncher": "rider_rider.desktop",
+        "alternative": {
+            "name": "JetBrains Rider"
+        }
+    },
+    {
+        "regex": {
+             "windows": "obs-studio-.*.exe"
+        },
+        "name": "OBS Studio",
+        "flatpak": { "remote": "flathub", "id": "com.obsproject.Studio" },
+        "desktopLauncher": "com.obsproject.Studio.desktop"
+    },
+    {
+        "regex": {
+             "windows": "android-studio-.*.exe"
+        },
+        "name": "Android Studio",
+        "flatpak": { "remote": "flathub", "id": "com.google.AndroidStudio" },
+        "desktopLauncher": "android-studio.desktop"
+    },
+    {
+        "regex": {
+             "windows": "arduino-ide.*.(exe|msi)"
+        },
+        "name": "Arduino IDE",
+        "flatpak": { "remote": "flathub", "id": "cc.arduino.IDE2" },
+        "desktopLauncher": "arduino.desktop"
+    },
+    {
+        "regex": {
+             "windows": "blender-.*.msi"
+        },
+        "name": "Blender",
+        "flatpak": { "remote": "flathub", "id": "org.blender.Blender" },
+        "desktopLauncher": "blender.desktop"
+    },
+    {
+        "regex": {
+             "windows": "handbrake.*.exe"
+        },
+        "name": "HandBrake",
+        "flatpak": { "remote": "flathub", "id": "fr.handbrake.ghb" },
+        "desktopLauncher": "fr.handbrake.ghb.desktop"
+    },
+    {
+        "regex": {
+             "windows": "bitcoin-.*.-setup.exe"
+        },
+        "name": "Bitcoin Core",
+        "flatpak": { "remote": "flathub", "id": "org.bitcoincore.bitcoin-qt" },
+        "desktopLauncher": "bitcoin-core_bitcoin-qt.desktop"
+    },
+    {
+        "regex": {
+             "windows": "audacity-win-.*.exe"
+        },
+        "name": "Audacity",
+        "flatpak": { "remote": "flathub", "id": "org.audacityteam.Audacity" },
+        "desktopLauncher": "audacity.desktop"
+    },
+    {
+        "regex": {
+            "windows": ".*\\b(avast|avg|avira|kaspersky|mcaffe|malwarebytes|norton|sophos).*.(exe|msi)"
+        },
+        "mainMessage": "Zorin OS is already resistant to Windows viruses and malware",
+        "noButton": true
+    },
+    {
+        "regex": {
+            "windows": ".*flash.*player.*.exe",
+            "linux": "flash-player.*"
+        },
+        "mainMessage": "Flash Player is no longer supported",
+        "noButton": true
+    },
+    {
+        "regex": {
+            "windows": "retroarch-.*.-setup.exe"
+        },
+        "name": "RetroArch",
+        "flatpak": { "remote": "flathub", "id": "org.libretro.RetroArch" },
+        "desktopLauncher": "retroarch.desktop"
+    },
+    {
+        "regex": {
+             "windows": "pcsx2.*.exe"
+        },
+        "name": "PCSX2",
+        "flatpak": { "remote": "flathub", "id": "net.pcsx2.PCSX2" },
+        "desktopLauncher": "PCSX2.desktop"
+    },
+    {
+        "regex": {
+            "windows": "yuzu.*.exe"
+        },
+        "name": "yuzu",
+        "flatpak": { "remote": "flathub", "id": "org.yuzu_emu.yuzu" },
+        "desktopLauncher": "org.yuzu_emu.yuzu.desktop"
+    },
+    {
+        "regex": {
+            "windows": "dolphin.*.exe"
+        },
+        "name": "Dolphin Emulator",
+        "flatpak": { "remote": "flathub", "id": "org.DolphinEmu.dolphin-emu" },
+        "desktopLauncher": "dolphin-emu.desktop"
+    },
+    {
+        "regex": {
+            "windows": "ppsspp.*.exe"
+        },
+        "name": "PPSSPP",
+        "flatpak": { "remote": "flathub", "id": "org.ppsspp.PPSSPP" },
+        "desktopLauncher": "ppsspp.desktop"
+    },
+    {
+        "regex": {
+            "windows": "rpcs3.*.exe"
+        },
+        "name": "RPCS3",
+        "flatpak": { "remote": "flathub", "id": "net.rpcs3.RPCS3" },
+        "desktopLauncher": "rpcs3-emu_rpcs3.desktop"
+    },
+    {
+        "regex": {
+            "windows": "citra-setup-windows.exe"
+        },
+        "name": "Citra",
+        "flatpak": { "remote": "flathub", "id": "org.citra_emu.citra" },
+        "desktopLauncher": "citra.desktop"
+    },
+    {
+        "regex": {
+            "windows": "duckstation-qt.*.exe"
+        },
+        "name": "DuckStation",
+        "flatpak": { "remote": "flathub", "id": "org.duckstation.DuckStation" },
+        "desktopLauncher": "duckstation.desktop"
+    },
+    {
+        "regex": {
+            "windows": "mame.*.exe"
+        },
+        "name": "MAME",
+        "flatpak": { "remote": "flathub", "id": "org.mamedev.MAME" },
+        "desktopLauncher": "mame.desktop"
+    },
+    {
+        "regex": {
+            "windows": "snes9x.*.exe"
+        },
+        "name": "Snes9x",
+        "flatpak": { "remote": "flathub", "id": "com.snes9x.Snes9x" },
+        "desktopLauncher": "snes9x-gtk.desktop"
+    },
+    {
+        "regex": {
+            "windows": "xemu.*.exe",
+            "linux": "xemu.*"
+        },
+        "name": "Xemu",
+        "flatpak": { "remote": "flathub", "id": "app.xemu.xemu" },
+        "desktopLauncher": "xemu.desktop"
+    },
+    {
+        "regex": {
+            "windows": "Setup Project64.*.exe"
+        },
+        "name": "Project64",
+        "flatpak": { "remote": "flathub", "id": "io.github.simple64.simple64" },
+        "desktopLauncher": "simple64.desktop",
+        "alternative": {
+            "name": "Simple64"
+        }
+    },
+    {
+        "regex": {
+            "windows": "(vscodesetup|vscodeusersetup).*.exe",
+            "linux": "code.*"
+        },
+        "name": "Visual Studio Code",
+        "flatpak": { "remote": "flathub", "id": "com.visualstudio.code." },
+        "desktopLauncher": "code.desktop"
+    },
+    {
+        "regex": {
+            "windows": "(vscodiumsetup|vscodiumusersetup).*.exe",
+            "linux": "codium.*"
+        },
+        "name": "VSCodium",
+        "flatpak": { "remote": "flathub", "id": "com.vscodium.codium." },
+        "desktopLauncher": "codium.desktop"
+    },
+    {
+        "regex": {
+            "windows": "sublime_text.*.setup.exe"
+        },
+        "name": "Sublime Text",
+        "flatpak": { "remote": "flathub", "id": "com.sublimetext.three" },
+        "desktopLauncher": "sublime_text.desktop"
+    },
+    {
+        "regex": {
+            "windows": "eclipse.exe"
+        },
+        "name": "Eclipse IDE",
+        "flatpak": { "remote": "flathub", "id": "org.eclipse.Java" }
+    },
+    {
+        "regex": {
+            "windows": "jgrasp.*.exe"
+        },
+        "name": "jGRASP website",
+        "webLink": { "href": "https://spider.eng.auburn.edu/user-cgi/grasp/grasp.pl?;dl=download_jgrasp.html" },
+        "mainMessage": "You can download jGRASP (.zip package for Linux) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+             "windows": "gvim.*.exe"
+        },
+        "name": "VIM",
+        "apt": "vim",
+        "flatpak": { "remote": "flathub", "id": "org.vim.Vim" },
+        "desktopLauncher": "vim.desktop"
+    },
+    {
+        "regex": {
+             "windows": "emacs.*.installer.exe"
+        },
+        "name": "GNU Emacs",
+        "apt": "emacs",
+        "flatpak": { "remote": "flathub", "id": "org.gnu.emacs" },
+        "desktopLauncher": "emacs.desktop"
+    },
+    {
+        "regex": {
+             "windows": "git-.*.exe"
+        },
+        "name": "Git",
+        "apt": "git"
+    },
+    {
+        "regex": {
+            "windows": "githubdesktopsetup.*.(exe|msi)"
+        },
+        "name": "GitHub Desktop",
+        "flatpak": { "remote": "flathub", "id": "io.github.shiftey.Desktop" },
+        "desktopLauncher": "githubdesktop.desktop"
+    },
+    {
+        "regex": {
+            "windows": "jdownloader2setup.*.exe"
+        },
+        "name": "JDownloader",
+        "flatpak": { "remote": "flathub", "id": "org.jdownloader.JDownloader" },
+        "desktopLauncher": "jdownloader2_JDownloader.desktop"
+    },
+    {
+        "regex": {
+            "windows": "tor-browser.*.(exe|msi)"
+        },
+        "name": "Tor Browser",
+        "flatpak": { "remote": "flathub", "id": "org.torproject.torbrowser-launcher" }
+    },
+    {
+        "regex": {
+            "windows": "ultimaker-cura.*.exe",
+            "linux": "ultimaker-cura.*.linux.*"
+        },
+        "name": "UltiMaker Cura",
+        "flatpak": { "remote": "flathub", "id": "com.ultimaker.cura" },
+        "desktopLauncher": "cura.desktop"
+    },
+    {
+        "regex": {
+            "windows": "musescore.*.(exe|msi)"
+        },
+        "name": "MuseScore",
+        "flatpak": { "remote": "flathub", "id": "org.musescore.MuseScore" },
+        "desktopLauncher": "musescore.desktop"
+    },
+    {
+        "regex": {
+            "windows": "protonmail.*.exe"
+        },
+        "name": "Proton Mail",
+        "flatpak": { "remote": "flathub", "id": "me.proton.Mail" },
+        "desktopLauncher": "proton-mail.desktop"
+    },
+    {
+        "regex": {
+            "windows": "protonvpn.*.exe"
+        },
+        "name": "Proton VPN",
+        "flatpak": { "remote": "flathub", "id": "com.protonvpn.www" },
+        "desktopLauncher": "protonvpn-app.desktop"
+    },
+    {
+        "regex": {
+            "windows": "protonpass.*.setup.*.exe"
+        },
+        "name": "Proton Pass",
+        "flatpak": { "remote": "flathub", "id": "me.proton.Pass" },
+        "desktopLauncher": "proton-pass.desktop"
+    },
+    {
+        "regex": {
+            "windows": "proton.*.drive.*.setup.*.exe"
+        },
+        "name": "Proton Drive",
+        "webLink": { "href": "https://account.proton.me/drive" },
+        "mainMessage": "You can use Proton Drive on the web"
+    },
+    {
+        "regex": {
+            "windows": "surfsharksetup.*.exe"
+        },
+        "name": "Surfshark VPN",
+        "flatpak": { "remote": "flathub", "id": "com.surfshark.Surfshark" },
+        "desktopLauncher": "surfshark.desktop"
+    },
+    {
+        "regex": {
+            "windows": "purevpn_setup.*.exe"
+        },
+        "name": "PureVPN",
+        "desktopLauncher": "purevpn.desktop"
+    },
+    {
+        "regex": {
+            "windows": "nordinstaller.*.exe"
+        },
+        "name": "NordVPN",
+        "desktopLauncher": "nordvpn.desktop"
+    },
+    {
+        "regex": {
+            "windows": "expressvpn.*.windows.*.release.*.exe"
+        },
+        "name": "ExpressVPN website",
+        "webLink": { "href": "https://www.expressvpn.com/support/vpn-setup/app-for-linux/" },
+        "mainMessage": "You can install ExpressVPN (Universal Installer) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "mullvadvpn.*.exe"
+        },
+        "name": "Mullvad VPN website",
+        "webLink": { "href": "https://mullvad.net/download/vpn/linux" },
+        "mainMessage": "You can install Mullvad VPN (Ubuntu/Debian repository) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "tunnelbear-installer.*.exe"
+        },
+        "name": "TunnelBear VPN website",
+        "webLink": { "href": "https://www.tunnelbear.com/blog/setting-up-tunnelbear-on-linux/" },
+        "mainMessage": "You can install TunnelBear VPN (Linux instructions) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "pia-windows.*.exe"
+        },
+        "name": "Private Internet Access website",
+        "webLink": { "href": "https://www.privateinternetaccess.com/download/linux-vpn" },
+        "mainMessage": "You can install Private Internet Access VPN (Linux app) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "ipvanish-setup.*.exe"
+        },
+        "name": "IPVanish VPN website",
+        "webLink": { "href": "https://support.ipvanish.com/hc/en-us/articles/31805500046235-OpenVPN-setup-in-Ubuntu" },
+        "mainMessage": "You can install IPVanish VPN (Ubuntu instructions) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "cyberghostvpnsetup.*.exe"
+        },
+        "name": "CyberGhost VPN website",
+        "webLink": { "href": "https://www.cyberghostvpn.com/download/linux-vpn" },
+        "mainMessage": "You can install CyberGhost VPN (Linux/Ubuntu installer) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "photoshop.*.cs6.*.exe"
+        },
+        "name": "Adobe Photoshop CS6 installer",
+        "mainMessage": "Adobe Photoshop CS6 is available to install on PlayOnLinux",
+        "desktopLauncher": "PlayOnLinux.desktop",
+        "flatpak": { "remote": "flathub", "id": "com.playonlinux.PlayOnLinux4" },
+        "alternative": {
+            "name": "PlayOnLinux"
+        }
+    },
+    {
+        "regex": {
+            "windows": "illustrator.*.cs6.*.exe"
+        },
+        "name": "Adobe Illustrator CS6 installer",
+        "mainMessage": "Adobe Illustrator CS6 is available to install on PlayOnLinux",
+        "desktopLauncher": "PlayOnLinux.desktop",
+        "flatpak": { "remote": "flathub", "id": "com.playonlinux.PlayOnLinux4" },
+        "alternative": {
+            "name": "PlayOnLinux"
+        }
+    },
+    {
+        "regex": {
+            "windows": "apache_openoffice.*.exe",
+            "linux": "openoffice.*"
+        },
+        "name": "Apache OpenOffice",
+        "desktopLauncher": "libreoffice-startcenter.desktop",
+        "apt": "libreoffice",
+        "alternative": {
+            "name": "LibreOffice"
+        }
+    },
+    {
+        "regex": {
+            "windows": "libreoffice.*.msi",
+            "linux": "libreoffice.*"
+        },
+        "name": "LibreOffice",
+        "apt": "libreoffice",
+        "desktopLauncher": "libreoffice-startcenter.desktop"
+    },
+    {
+        "regex": {
+            "windows": "desktopeditors.*.(exe|msi)",
+            "linux": "onlyoffice-desktopeditors.*"
+        },
+        "name": "ONLYOFFICE",
+        "flatpak": { "remote": "flathub", "id": "org.onlyoffice.desktopeditors" },
+        "desktopLauncher": "onlyoffice-desktopeditors.desktop"
+    },
+    {
+        "regex": {
+            "windows": "wps_office_inst.*.(exe|msi)"
+        },
+        "name": "WPS Office",
+        "flatpak": { "remote": "flathub", "id": "com.wps.Office" },
+        "desktopLauncher": "wps-office-wps.desktop"
+    },
+    {
+        "regex": {
+            "windows": "virtualbox.*.win.exe"
+        },
+        "name": "VirtualBox",
+        "apt": "virtualbox",
+        "desktopLauncher": "virtualbox.desktop"
+    },
+    {
+        "regex": {
+            "windows": "rufus.*.exe"
+        },
+        "name": "Rufus",
+        "desktopLauncher": "com.system76.Popsicle.desktop",
+        "flatpak": { "remote": "flathub", "id": "com.system76.Popsicle" },
+        "alternative": {
+            "name": "Popsicle"
+        }
+    },
+    {
+        "regex": {
+            "windows": "balenaetcher.*.setup.exe"
+        },
+        "name": "balenaEtcher website",
+        "webLink": { "href": "https://etcher.balena.io/#download-etcher" },
+        "mainMessage": "You can download balenaEtcher (.zip 64-bit package for Linux) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "(windows.*(setup|install)|mediacreationtool).*.exe"
+        },
+        "name": "Microsoft Windows",
+        "desktopLauncher": "org.gnome.Boxes.desktop",
+        "flatpak": { "remote": "flathub", "id": "org.gnome.Boxes" },
+        "mainMessage": "Install GNOME Boxes to run Microsoft Windows inside a Virtual Machine in Zorin OS",
+        "alternative": {
+            "name": "GNOME Boxes"
+        }
+   },
+    {
+        "regex": {
+            "windows": "citrixworkspace.*.exe"
+        },
+        "name": "Citrix website",
+        "webLink": { "href": "https://www.citrix.com/downloads/workspace-app/linux/workspace-app-for-linux-latest.html" },
+        "mainMessage": "You can download Citrix Workspace (.deb package) for Zorin OS from the web"
+   }
+]
