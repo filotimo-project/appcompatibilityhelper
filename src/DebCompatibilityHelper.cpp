@@ -57,7 +57,7 @@ QString DebCompatibilityHelper::description() const
 
     desc += u"<br><br>"_s;
     desc += i18n("Alternatively, you may be able to create a Distrobox to run this DEB package in a containerized environment. ");
-    desc += i18n("This is not recommended for most users, as it requires advanced additional setup.");
+    desc += i18n("This is not recommended for most users, as it requires additional advanced setup.");
 
     return desc;
 }

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Appcompatibilityhelper 0.10\n"
 "Report-Msgid-Bugs-To: https://github.com/filotimo-project/appcompatibilityhelper \n"
 "appcompatibilityhelper\n"
-"POT-Creation-Date: 2025-07-14 12:37+0000\n"
+"POT-Creation-Date: 2025-07-14 13:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -195,7 +195,7 @@ msgstr ""
 #: src/DebCompatibilityHelper.cpp:60 src/RpmCompatibilityHelper.cpp:60
 #, kde-format
 msgid ""
-"This is not recommended for most users, as it requires advanced additional "
+"This is not recommended for most users, as it requires additional advanced "
 "setup."
 msgstr ""
 
