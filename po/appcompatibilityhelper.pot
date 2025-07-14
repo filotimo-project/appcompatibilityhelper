@@ -1,15 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Appcompatibilityhelper translations.
+# Copyright (C) 2025 Appcompatibilityhelper contributors
+# This file is distributed under the same license as the Appcompatibilityhelper package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: https://github.com/filotimo-linux/"
+"Project-Id-Version: Appcompatibilityhelper 0.10\n"
+"Report-Msgid-Bugs-To: https://github.com/filotimo-project/appcompatibilityhelper \n"
 "appcompatibilityhelper\n"
-"POT-Creation-Date: 2025-07-14 12:12+0000\n"
+"POT-Creation-Date: 2025-07-14 12:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,37 +18,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: build/src/contents/ui/Main.qml:84 src/contents/ui/Main.qml:84
+#: src/WindowsCompatibilityHelper.cpp:130
 #, kde-format
-msgid "Open With…"
+msgid "%1, a native %2 alternative to %3, is available for installation. "
 msgstr ""
 
-#: build/src/contents/ui/Main.qml:123 src/contents/ui/Main.qml:123
+#: src/main.cpp:57
 #, kde-format
-msgid "Cancel"
-msgstr ""
-
-#: po/rc.cpp:1 src/main.cpp:62 rc.cpp:1
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-
-#: po/rc.cpp:2 src/main.cpp:62 rc.cpp:2
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-
-#: src/DebCompatibilityHelper.cpp:27 src/RpmCompatibilityHelper.cpp:27
-#: src/WindowsCompatibilityHelper.cpp:104
-#, kde-format
-msgid "Open %1 instead"
-msgstr ""
-
-#: src/DebCompatibilityHelper.cpp:29
-#, kde-format
-msgid "DEB packages are not natively supported on %1"
+msgid "(c) 2025"
 msgstr ""
 
 #: src/DebCompatibilityHelper.cpp:47 src/RpmCompatibilityHelper.cpp:47
@@ -57,33 +34,20 @@ msgstr ""
 msgid "A native %1 version of %2 is already installed on your system. "
 msgstr ""
 
-#: src/DebCompatibilityHelper.cpp:48 src/RpmCompatibilityHelper.cpp:48
-#, kde-format
-msgid ""
-"It's recommended to use the native version for better system integration."
-msgstr ""
-
 #: src/DebCompatibilityHelper.cpp:50 src/RpmCompatibilityHelper.cpp:50
 #: src/WindowsCompatibilityHelper.cpp:133
 #, kde-format
 msgid "A native %1 version of %2 is available for installation. "
 msgstr ""
 
-#: src/DebCompatibilityHelper.cpp:51 src/RpmCompatibilityHelper.cpp:51
+#: src/WindowsCompatibilityHelper.cpp:146
 #, kde-format
-msgid ""
-"Installing the native version is recommended for better system integration."
+msgid "Alternatively, you can install Bottles to run Windows applications."
 msgstr ""
 
-#: src/DebCompatibilityHelper.cpp:54
+#: src/WindowsCompatibilityHelper.cpp:144
 #, kde-format
-msgid "No native %1 alternative was found for this DEB package. "
-msgstr ""
-
-#: src/DebCompatibilityHelper.cpp:55 src/RpmCompatibilityHelper.cpp:55
-#: src/WindowsCompatibilityHelper.cpp:138
-#, kde-format
-msgid "You can search for alternatives online or in %1."
+msgid "Alternatively, you can run the Windows version using Bottles."
 msgstr ""
 
 #: src/DebCompatibilityHelper.cpp:59
@@ -93,33 +57,15 @@ msgid ""
 "in a containerized environment. "
 msgstr ""
 
-#: src/DebCompatibilityHelper.cpp:60 src/RpmCompatibilityHelper.cpp:60
+#: src/RpmCompatibilityHelper.cpp:59
 #, kde-format
 msgid ""
-"This is not recommended for most users, as it requires advanced additional "
-"setup."
+"Alternatively, you may be able to create a Distrobox to run this RPM package "
+"in a containerized environment. "
 msgstr ""
 
-#: src/DebCompatibilityHelper.cpp:90 src/RpmCompatibilityHelper.cpp:90
-#: src/WindowsCompatibilityHelper.cpp:161
-#, kde-format
-msgid "Open %1"
-msgstr ""
-
-#: src/DebCompatibilityHelper.cpp:92 src/RpmCompatibilityHelper.cpp:92
-#: src/WindowsCompatibilityHelper.cpp:163
-#, kde-format
-msgid "Install %1"
-msgstr ""
-
-#: src/ICompatibilityHelper.cpp:47
-#, kde-format
-msgid "Discover"
-msgstr ""
-
-#: src/ICompatibilityHelper.cpp:68 src/ICompatibilityHelper.cpp:90
-#, kde-format
-msgid "Linux"
+#: org.filotimoproject.appcompatibilityhelper.desktop:4
+msgid "App Compatibility Support"
 msgstr ""
 
 #: src/main.cpp:49
@@ -128,45 +74,25 @@ msgctxt "@title"
 msgid "App Compatibility Support"
 msgstr ""
 
-#: src/main.cpp:53
+#: src/contents/ui/Main.qml:123
 #, kde-format
-msgid ""
-"Provides support for running or finding alternatives to certain package "
-"types on ublue-based distributions."
+msgid "Cancel"
 msgstr ""
 
-#: src/main.cpp:57
+#: src/DebCompatibilityHelper.cpp:29
 #, kde-format
-msgid "(c) 2025"
+msgid "DEB packages are not natively supported on %1"
 msgstr ""
 
-#: src/main.cpp:58
+#: src/ICompatibilityHelper.cpp:47
 #, kde-format
-msgctxt "@info:credit"
-msgid "Thomas Duckworth"
+msgid "Discover"
 msgstr ""
 
-#: src/main.cpp:59
+#: src/DebCompatibilityHelper.cpp:92 src/RpmCompatibilityHelper.cpp:92
+#: src/WindowsCompatibilityHelper.cpp:163
 #, kde-format
-msgctxt "@info:credit"
-msgid "Maintainer"
-msgstr ""
-
-#: src/RpmCompatibilityHelper.cpp:29
-#, kde-format
-msgid "RPM packages are not natively supported on %1"
-msgstr ""
-
-#: src/RpmCompatibilityHelper.cpp:54
-#, kde-format
-msgid "No native %1 alternative was found for this RPM package. "
-msgstr ""
-
-#: src/RpmCompatibilityHelper.cpp:59
-#, kde-format
-msgid ""
-"Alternatively, you may be able to create a Distrobox to run this RPM package "
-"in a containerized environment. "
+msgid "Install %1"
 msgstr ""
 
 #: src/WindowsCompatibilityHelper.cpp:106
@@ -174,21 +100,9 @@ msgstr ""
 msgid "Install %1 from %2 instead"
 msgstr ""
 
-#: src/WindowsCompatibilityHelper.cpp:109
+#: src/WindowsCompatibilityHelper.cpp:201
 #, kde-format
-msgid "Windows applications are not natively supported on %1"
-msgstr ""
-
-#: src/WindowsCompatibilityHelper.cpp:128
-#, kde-format
-msgid ""
-"It's recommended to use the native version for better performance and system "
-"integration."
-msgstr ""
-
-#: src/WindowsCompatibilityHelper.cpp:130
-#, kde-format
-msgid "%1, a native %2 alternative to %3, is available for installation. "
+msgid "Install Bottles"
 msgstr ""
 
 #: src/WindowsCompatibilityHelper.cpp:131
@@ -199,19 +113,78 @@ msgid ""
 "system integration."
 msgstr ""
 
+#: src/DebCompatibilityHelper.cpp:51 src/RpmCompatibilityHelper.cpp:51
+#, kde-format
+msgid ""
+"Installing the native version is recommended for better system integration."
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:128
+#, kde-format
+msgid ""
+"It's recommended to use the native version for better performance and system "
+"integration."
+msgstr ""
+
+#: src/DebCompatibilityHelper.cpp:48 src/RpmCompatibilityHelper.cpp:48
+#, kde-format
+msgid ""
+"It's recommended to use the native version for better system integration."
+msgstr ""
+
+#: src/ICompatibilityHelper.cpp:68 src/ICompatibilityHelper.cpp:90
+#, kde-format
+msgid "Linux"
+msgstr ""
+
+#: src/main.cpp:59
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer"
+msgstr ""
+
+#: src/DebCompatibilityHelper.cpp:54
+#, kde-format
+msgid "No native %1 alternative was found for this DEB package. "
+msgstr ""
+
+#: src/RpmCompatibilityHelper.cpp:54
+#, kde-format
+msgid "No native %1 alternative was found for this RPM package. "
+msgstr ""
+
 #: src/WindowsCompatibilityHelper.cpp:137
 #, kde-format
 msgid "No native %1 alternative was found for this Windows application. "
 msgstr ""
 
-#: src/WindowsCompatibilityHelper.cpp:144
+#: src/DebCompatibilityHelper.cpp:90 src/RpmCompatibilityHelper.cpp:90
+#: src/WindowsCompatibilityHelper.cpp:161
 #, kde-format
-msgid "Alternatively, you can run the Windows version using Bottles."
+msgid "Open %1"
 msgstr ""
 
-#: src/WindowsCompatibilityHelper.cpp:146
+#: src/DebCompatibilityHelper.cpp:27 src/RpmCompatibilityHelper.cpp:27
+#: src/WindowsCompatibilityHelper.cpp:104
 #, kde-format
-msgid "Alternatively, you can install Bottles to run Windows applications."
+msgid "Open %1 instead"
+msgstr ""
+
+#: src/contents/ui/Main.qml:84
+#, kde-format
+msgid "Open With…"
+msgstr ""
+
+#: src/main.cpp:53 org.filotimoproject.appcompatibilityhelper.desktop:5
+#, kde-format
+msgid ""
+"Provides support for running or finding alternatives to certain package "
+"types on ublue-based distributions."
+msgstr ""
+
+#: src/RpmCompatibilityHelper.cpp:29
+#, kde-format
+msgid "RPM packages are not natively supported on %1"
 msgstr ""
 
 #: src/WindowsCompatibilityHelper.cpp:199
@@ -219,7 +192,38 @@ msgstr ""
 msgid "Run with Bottles"
 msgstr ""
 
-#: src/WindowsCompatibilityHelper.cpp:201
+#: src/DebCompatibilityHelper.cpp:60 src/RpmCompatibilityHelper.cpp:60
 #, kde-format
-msgid "Install Bottles"
+msgid ""
+"This is not recommended for most users, as it requires advanced additional "
+"setup."
+msgstr ""
+
+#: src/main.cpp:58
+#, kde-format
+msgctxt "@info:credit"
+msgid "Thomas Duckworth"
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:109
+#, kde-format
+msgid "Windows applications are not natively supported on %1"
+msgstr ""
+
+#: src/DebCompatibilityHelper.cpp:55 src/RpmCompatibilityHelper.cpp:55
+#: src/WindowsCompatibilityHelper.cpp:138
+#, kde-format
+msgid "You can search for alternatives online or in %1."
+msgstr ""
+
+#: po/rc.cpp:2 src/main.cpp:62 rc.cpp:2
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: po/rc.cpp:1 src/main.cpp:62 rc.cpp:1
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
 msgstr ""

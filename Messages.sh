@@ -2,8 +2,9 @@
 # https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems/Outside_KDE_repositories
 
 BASEDIR=`pwd`	# root of translatable sources
-PROJECT="appcompatibilityhelper"	# project name
-BUGADDR="https://github.com/filotimo-linux/appcompatibilityhelper"	# MSGID-Bugs
+PROJECT=$(grep -Po '(?<=project\()\w+' CMakeLists.txt) # project name
+PROJECT_UPPER="$(tr '[:lower:]' '[:upper:]' <<< ${PROJECT:0:1})${PROJECT:1}" # uppercased project name
+BUGADDR="https://github.com/filotimo-project/appcompatibilityhelper"	# MSGID-Bugs
 WDIR="`pwd`/po"		# working dir
 
 
@@ -22,7 +23,13 @@ echo "Done preparing rc files"
 echo "Extracting messages"
 cd ${BASEDIR}
 # see above on sorting
-find . -name '*.cpp' -o -name '*.h' -o -name '*.c' -o -name '*.qml' | sort > ${WDIR}/infiles.list
+find . \( -name '*.cpp' -o -name '*.h' -o -name '*.c' -o -name '*.qml' \) \
+    -exec sh -c '
+         for f do
+           git check-ignore -q "$f" ||
+           echo "$f"
+         done
+       ' find-sh {} + | sort > ${WDIR}/infiles.list
 echo "rc.cpp" >> ${WDIR}/infiles.list
 cd ${WDIR}
 xgettext --c++ --kde --from-code=UTF-8 \
@@ -35,11 +42,32 @@ xgettext --c++ --kde --from-code=UTF-8 \
     -kklxi18n:1 -kklxi18nc:1c,2 -kklxi18np:1,2 -kklxi18ncp:1c,2,3 \
     --msgid-bugs-address="${BUGADDR}" \
     --files-from=infiles.list -D ${BASEDIR} -D ${WDIR} -o ${PROJECT}.pot || { echo "error while calling xgettext. aborting."; exit 1; }
+
+# extract messages from desktop files
+echo "Extracting from desktop files"
+find ${BASEDIR} -name '*.desktop' \
+    -exec sh -c '
+         for f do
+           git check-ignore -q "$f" ||
+           echo "$f"
+         done
+       ' find-sh {} + | sed "s|^${BASEDIR}/||" | sort > ${WDIR}/desktopfiles.list
+xgettext --language=Desktop --omit-header \
+    --files-from=desktopfiles.list -D ${BASEDIR} -D ${WDIR} --from-code=UTF-8 -o desktop_files.pot || { echo "error while calling xgettext. aborting."; exit 1; }
+touch ${PROJECT}.pot.new
+msgcat --sort-output -o ${PROJECT}.pot.new ${PROJECT}.pot desktop_files.pot || { echo "error while calling msgcat. aborting."; exit 1; }
+mv ${PROJECT}.pot.new ${PROJECT}.pot
+rm desktop_files.pot ${WDIR}/desktopfiles.list
 echo "Done extracting messages"
 
-
 echo "Merging translations"
-catalogs=`find . -name '*.po'`
+catalogs=`find . -name '*.po' \
+    -exec sh -c '
+         for f do
+           git check-ignore -q "$f" ||
+           echo "$f"
+         done
+       ' find-sh {} +`
 for cat in $catalogs; do
   echo $cat
   msgmerge -o $cat.new $cat ${PROJECT}.pot
@@ -47,6 +75,18 @@ for cat in $catalogs; do
 done
 echo "Done merging translations"
 
+echo "Setting contents of ${PROJECT}.pot"
+
+CURRENT_YEAR=`date +%Y`
+VERSION=$(grep -m 1 -Po 'project\(\w+ VERSION \K[^ )]+' ${BASEDIR}/CMakeLists.txt)
+
+sed -i \
+    -e "s/Project-Id-Version: PACKAGE VERSION/Project-Id-Version: ${PROJECT_UPPER} ${VERSION}/" \
+    -e "s|Report-Msgid-Bugs-To: .*|Report-Msgid-Bugs-To: ${BUGADDR} \\\n\"|" \
+    -e "s/SOME DESCRIPTIVE TITLE./${PROJECT_UPPER} translations./" \
+    -e "s/YEAR THE PACKAGE'S COPYRIGHT HOLDER/${CURRENT_YEAR} ${PROJECT_UPPER} contributors/" \
+    -e "s/This file is distributed under the same license as the PACKAGE package./This file is distributed under the same license as the ${PROJECT_UPPER} package./" \
+    ${PROJECT}.pot
 
 echo "Cleaning up"
 cd ${WDIR}

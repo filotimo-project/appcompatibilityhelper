@@ -56,7 +56,8 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/directories.h.in
 # https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems/Outside_KDE_repositories
 add_subdirectory(po)
 
-install(FILES org.filotimoproject.appcompatibilityhelper.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+# Install desktop file -- internationalization function can be seen in po/CMakeLists.txt
+install_i18n_desktop_file(${CMAKE_SOURCE_DIR}/org.filotimoproject.appcompatibilityhelper.desktop ${KDE_INSTALL_APPDIR})
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
