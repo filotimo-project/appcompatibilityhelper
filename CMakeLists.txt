@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-project(windowsapphelper VERSION 0.10)
+project(appcompatibilityhelper VERSION 0.10)
 
 include(FeatureSummary)
 
@@ -25,8 +25,8 @@ include(KDEGitCommitHooks)
 include(KDEClangFormat)
 
 ecm_setup_version(${PROJECT_VERSION}
-    VARIABLE_PREFIX WINDOWSAPPHELPER
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/version-windowsapphelper.h"
+    VARIABLE_PREFIX APPCOMPATIBILITYHELPER
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/version-appcompatibilityhelper.h"
 )
 
 set(QT_EXTRA_COMPONENTS)
@@ -49,11 +49,14 @@ ecm_find_qmlmodule(org.kde.kirigamiaddons.formcard 1.0)
 
 add_subdirectory(src)
 
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/directories.h.in
+               ${CMAKE_CURRENT_SOURCE_DIR}/src/directories.h @ONLY)
+
 # i18n
 # https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems/Outside_KDE_repositories
 add_subdirectory(po)
 
-install(FILES org.filotimoproject.windowsapphelper.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES org.filotimoproject.appcompatibilityhelper.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 

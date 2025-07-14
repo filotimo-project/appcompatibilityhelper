@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: https://github.com/filotimo-linux/"
+"appcompatibilityhelper\n"
+"POT-Creation-Date: 2025-07-14 11:12+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: build/src/contents/ui/Main.qml:84 src/contents/ui/Main.qml:84
+#, kde-format
+msgid "Open With…"
+msgstr ""
+
+#: build/src/contents/ui/Main.qml:123 src/contents/ui/Main.qml:123
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: po/rc.cpp:1 src/main.cpp:62 rc.cpp:1
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#: po/rc.cpp:2 src/main.cpp:62 rc.cpp:2
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: src/ICompatibilityHelper.cpp:47
+#, kde-format
+msgid "Discover"
+msgstr ""
+
+#: src/ICompatibilityHelper.cpp:68 src/ICompatibilityHelper.cpp:90
+#, kde-format
+msgid "Linux"
+msgstr ""
+
+#: src/main.cpp:49
+#, kde-format
+msgctxt "@title"
+msgid "App Compatibility Support"
+msgstr ""
+
+#: src/main.cpp:53
+#, kde-format
+msgid ""
+"Provides support for running or finding alternatives to certain package "
+"types on ublue-based distributions."
+msgstr ""
+
+#: src/main.cpp:57
+#, kde-format
+msgid "(c) 2025"
+msgstr ""
+
+#: src/main.cpp:58
+#, kde-format
+msgctxt "@info:credit"
+msgid "Thomas Duckworth"
+msgstr ""
+
+#: src/main.cpp:59
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer"
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:97
+#, kde-format
+msgid "%1 — Windows App Support"
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:104
+#, kde-format
+msgid "Open %1 instead"
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:106
+#, kde-format
+msgid "Install %1 from %2 instead"
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:109
+#, kde-format
+msgid "Windows applications are not natively supported on %1"
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:127
+#, kde-format
+msgid "A native %1 version of %2 is already installed on your system. "
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:128
+#, kde-format
+msgid ""
+"It's recommended to use the native version for better performance and "
+"integration."
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:130
+#, kde-format
+msgid "%1, a native %2 alternative to %3, is available for installation. "
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:131
+#: src/WindowsCompatibilityHelper.cpp:134
+#, kde-format
+msgid ""
+"Installing the native version is recommended for better performance and "
+"system integration."
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:133
+#, kde-format
+msgid "A native %1 version of %2 is available for installation. "
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:137
+#, kde-format
+msgid "No native %1 alternative was found for this Windows application. "
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:138
+#, kde-format
+msgid "You can search for alternatives online or in %1."
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:144
+#, kde-format
+msgid "Alternatively, you can run the Windows version using Bottles."
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:146
+#, kde-format
+msgid "Alternatively, you can install Bottles to run Windows applications."
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:161
+#, kde-format
+msgid "Open %1"
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:163
+#, kde-format
+msgid "Install %1"
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:199
+#, kde-format
+msgid "Run with Bottles"
+msgstr ""
+
+#: src/WindowsCompatibilityHelper.cpp:201
+#, kde-format
+msgid "Install Bottles"
+msgstr ""

@@ -1,0 +1,6 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+// SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
+
+#pragma once
+
+#define WINDOWSCOMPATIBILITYHELPER_DB_PATH u"@KDE_INSTALL_FULL_DATADIR@/@PROJECT_NAME@/app_db.json"_s

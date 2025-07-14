@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: BSD-3-Clause
+# SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
+
 FIND_PROGRAM(GETTEXT_MSGFMT_EXECUTABLE msgfmt)
 
 IF(NOT GETTEXT_MSGFMT_EXECUTABLE)
@@ -7,7 +10,7 @@ IF(NOT GETTEXT_MSGFMT_EXECUTABLE)
 ------")
 ELSE(NOT GETTEXT_MSGFMT_EXECUTABLE)
 
-        SET(catalogname windowsapphelper)
+        SET(catalogname appcompatibilityhelper)
 
         FILE(GLOB PO_FILES *.po)
         SET(GMO_FILES)

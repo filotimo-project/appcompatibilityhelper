@@ -2,8 +2,8 @@
 # https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems/Outside_KDE_repositories
 
 BASEDIR=`pwd`	# root of translatable sources
-PROJECT="windowsapphelper"	# project name
-BUGADDR="https://github.com/filotimo-linux/windowsapphelper"	# MSGID-Bugs
+PROJECT="appcompatibilityhelper"	# project name
+BUGADDR="https://github.com/filotimo-linux/appcompatibilityhelper"	# MSGID-Bugs
 WDIR="`pwd`/po"		# working dir
 
 

@@ -1,4 +1,4 @@
-image_name := "localhost/windowsapphelper:dev"
+image_name := "localhost/appcompatibilityhelper:dev"
 default: build
 
 build-container:

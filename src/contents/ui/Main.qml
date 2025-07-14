@@ -5,17 +5,23 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
-import org.filotimoproject.windowsapphelper
+import org.filotimoproject.appcompatibilityhelper
 
 Kirigami.ApplicationWindow {
     id: root
 
-    title: i18n("%1 — Windows App Support", WindowsAppHelper.appName)
+    title: AppCompatibilityHelper.windowTitle
 
-    minimumWidth: appIcon.width + actionButtons.width + Kirigami.Units.largeSpacing * 8
-    width: appIcon.width + actionButtons.width + Kirigami.Units.largeSpacing * 8
-    minimumHeight: pageStack.initialPage.implicitHeight
+    // This is uniquely moronic, but so is QML.
+    // FIXME: In some rare cases, this may clip the content.
+    // This looks "good enough", but it would be better to have a proper minimum height determined. Unfortunately, I tried, but QML layouting sucks.
+    minimumHeight: pageContent.Layout.minimumHeight + Kirigami.Units.largeSpacing * 8
     height: minimumHeight
+    maximumHeight: height
+
+    minimumWidth: Math.max(Kirigami.Units.gridUnit * 30, icon.width + actionButtons.width + Kirigami.Units.largeSpacing * 4 + Kirigami.Units.smallSpacing * 2)
+    width: minimumWidth
+    maximumWidth: width
 
     controlsVisible: false
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.None
@@ -28,76 +34,42 @@ Kirigami.ApplicationWindow {
         padding: Kirigami.Units.largeSpacing
 
         ColumnLayout {
+            id: pageContent
+
             spacing: Kirigami.Units.smallSpacing
             anchors.fill: parent
 
             RowLayout {
-                spacing: Kirigami.Units.smallSpacing
                 Layout.alignment: Qt.AlignLeft | Qt.AlignTop
                 Layout.fillWidth: true
-                Layout.fillHeight: true
+                Layout.margins: Kirigami.Units.largeSpacing
 
                 Kirigami.Icon {
-                    id: appIcon
-                    Layout.margins: Kirigami.Units.largeSpacing * 2
+                    id: icon
+                    Layout.rightMargin: Kirigami.Units.largeSpacing * 2
                     Layout.preferredWidth: Kirigami.Units.iconSizes.large * 2
                     Layout.preferredHeight: Kirigami.Units.iconSizes.large * 2
                     Layout.alignment: Qt.AlignCenter
-                    source: WindowsAppHelper.appIcon
+                    source: AppCompatibilityHelper.icon
                 }
 
                 ColumnLayout {
-                    spacing: Kirigami.Units.smallSpacing
+                    spacing: Kirigami.Units.largeSpacing
                     Layout.alignment: Qt.AlignLeft | Qt.AlignTop
-                    Layout.margins: Kirigami.Units.largeSpacing
                     Layout.fillWidth: true
 
                     Kirigami.Heading {
-                        Layout.margins: Kirigami.Units.smallSpacing
                         Layout.alignment: Qt.AlignLeft | Qt.AlignTop
                         Layout.fillWidth: true
-
                         wrapMode: Text.WordWrap
-                        visible: WindowsAppHelper.hasNativeApp && !WindowsAppHelper.needsAlternativeApp && !WindowsAppHelper.nativeAppAlreadyInstalled
-                        text: i18n("%1 can be installed from %2", WindowsAppHelper.appName, WindowsAppHelper.defaultAppStoreName)
-                    }
-
-                    Kirigami.Heading {
-                        Layout.margins: Kirigami.Units.smallSpacing
-                        Layout.alignment: Qt.AlignLeft | Qt.AlignTop
-                        Layout.fillWidth: true
-
-                        wrapMode: Text.WordWrap
-                        visible: WindowsAppHelper.nativeAppAlreadyInstalled
-                        text: i18n("%1 is already installed", WindowsAppHelper.appName)
-                    }
-
-                    Kirigami.Heading {
-                        Layout.margins: Kirigami.Units.smallSpacing
-                        Layout.alignment: Qt.AlignLeft | Qt.AlignTop
-                        Layout.fillWidth: true
-
-                        wrapMode: Text.WordWrap
-                        visible: WindowsAppHelper.hasNativeApp && WindowsAppHelper.needsAlternativeApp && !WindowsAppHelper.nativeAppAlreadyInstalled
-                        text: i18n("%1, an alternative for %2, can be installed from %3", WindowsAppHelper.alternativeAppName, WindowsAppHelper.appName, WindowsAppHelper.defaultAppStoreName)
-                    }
-
-                    Kirigami.Heading {
-                        Layout.margins: Kirigami.Units.smallSpacing
-                        Layout.alignment: Qt.AlignLeft | Qt.AlignTop
-                        Layout.fillWidth: true
-
-                        wrapMode: Text.WordWrap
-                        visible: !WindowsAppHelper.hasNativeApp && !WindowsAppHelper.nativeAppAlreadyInstalled
-                        text: WindowsAppHelper.isBottlesInstalled ? i18n("Run %1 with Bottles?", WindowsAppHelper.appName) : i18n("Install Bottles to run %1?", WindowsAppHelper.appName)
+                        text: AppCompatibilityHelper.heading
                     }
 
                     QQC2.Label {
-                        Layout.margins: Kirigami.Units.smallSpacing
+                        wrapMode: Text.WordWrap
                         Layout.fillWidth: true
                         Layout.fillHeight: true
-                        wrapMode: Text.WordWrap
-                        text: i18n("The file you are trying to open is a Windows executable file, and is not natively supported on Linux-based operating systems.<br><br>Applications built for Windows are not designed for this operating system, but they can be run through compatibility layers such as Bottles. Preferably, install the native version if available.")
+                        text: AppCompatibilityHelper.description
                     }
                 }
             }
@@ -111,28 +83,37 @@ Kirigami.ApplicationWindow {
                     icon.name: "system-run-symbolic"
                     text: i18n("Open With…")
                     onClicked: {
-                        WindowsAppHelper.openWith()
+                        AppCompatibilityHelper.openWithAction()
                         root.close()
                     }
                 }
 
                 QQC2.Button {
-                    highlighted: !WindowsAppHelper.hasNativeApp
-                    icon.name: WindowsAppHelper.isBottlesInstalled ? "com.usebottles.bottles" : WindowsAppHelper.defaultAppStoreIcon
-                    text: WindowsAppHelper.isBottlesInstalled ? i18n("Run With Bottles") : i18n("Install Bottles From %1", WindowsAppHelper.defaultAppStoreName)
+                    id: compatibilityToolActionButton
+
+                    highlighted: !nativeAppActionButton.visible
+                    visible: AppCompatibilityHelper.hasCompatibilityTool
+
+                    icon.name: AppCompatibilityHelper.compatibilityToolActionIcon
+                    text: AppCompatibilityHelper.compatibilityToolActionText
+
                     onClicked: {
-                        WindowsAppHelper.openExeWithOrInstallBottles()
+                        AppCompatibilityHelper.compatibilityToolAction()
                         root.close()
                     }
                 }
 
                 QQC2.Button {
+                    id: nativeAppActionButton
+
                     highlighted: true
-                    visible: WindowsAppHelper.hasNativeApp
-                    icon.name: WindowsAppHelper.nativeAppAlreadyInstalled ? WindowsAppHelper.appIcon : WindowsAppHelper.defaultAppStoreIcon
-                    text: WindowsAppHelper.nativeAppAlreadyInstalled ? i18n("Open %1", WindowsAppHelper.appName) : i18n("Install From %1", WindowsAppHelper.defaultAppStoreName)
+                    visible: AppCompatibilityHelper.hasNativeApp
+
+                    icon.name: AppCompatibilityHelper.nativeAppActionIcon
+                    text: AppCompatibilityHelper.nativeAppActionText
+
                     onClicked: {
-                        WindowsAppHelper.installOrOpenNativeApp()
+                        AppCompatibilityHelper.nativeAppAction()
                         root.close()
                     }
                 }
