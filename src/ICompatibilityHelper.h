@@ -76,6 +76,14 @@ protected:
     // This doesn't need to be exposed to the QML interface, as it is only used internally to determine how to display the native app action.
     virtual bool isNativeAppInstalled() const = 0;
 
+    // Provides the name of the native application, e.g. "Microsoft Edge" or "Mozilla Firefox".
+    // This doesn't need to be exposed to the QML interface, as it is only used internally to determine how to display the native app action.
+    virtual QString nativeAppName() const = 0;
+
+    // Provides the reference to the native application, e.g. "org.mozilla.firefox".
+    // This doesn't need to be exposed to the QML interface, as it is only used internally for the native app action.
+    virtual QString nativeAppRef() const = 0;
+
     // Indicates if the compatibility tool is already installed on the system.
     // This doesn't need to be exposed to the QML interface, as it is only used internally to determine how to display the compatibility tool action.
     virtual bool isCompatibilityToolInstalled() const = 0;

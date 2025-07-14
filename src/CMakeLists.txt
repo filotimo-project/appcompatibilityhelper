@@ -14,6 +14,8 @@ target_sources(appcompatibilityhelper_static PUBLIC
     ICompatibilityHelper.cpp
     CompatibilityHelperFactory.cpp
     WindowsCompatibilityHelper.cpp
+    RpmCompatibilityHelper.cpp
+    DebCompatibilityHelper.cpp
 )
 
 target_link_libraries(appcompatibilityhelper_static PUBLIC

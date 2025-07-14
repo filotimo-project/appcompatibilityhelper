@@ -22,7 +22,7 @@
 WindowsCompatibilityHelper::WindowsCompatibilityHelper(const QUrl &databaseFilePath, const QUrl &openedExePath, QObject *parent)
     : ICompatibilityHelper(openedExePath, parent)
 {
-    m_appName = m_filePath.fileName();
+    m_nativeAppName = m_filePath.fileName();
     m_hasNativeApp = false;
     m_needsAlternativeApp = false;
 
@@ -65,7 +65,7 @@ WindowsCompatibilityHelper::WindowsCompatibilityHelper(const QUrl &databaseFileP
 
         if (match.hasMatch()) {
             m_hasNativeApp = true;
-            m_appName = appEntry[u"name"_s].toString(exeFileName);
+            m_nativeAppName = appEntry[u"name"_s].toString(exeFileName);
 
             QJsonObject flatpakObject = appEntry[u"flatpak"_s].toObject();
             if (flatpakObject.contains(u"id"_s) && flatpakObject[u"id"_s].isString()) {
@@ -75,10 +75,10 @@ WindowsCompatibilityHelper::WindowsCompatibilityHelper(const QUrl &databaseFileP
             if (appEntry.contains(u"alternative"_s) && appEntry[u"alternative"_s].isObject()) {
                 m_needsAlternativeApp = true;
                 QJsonObject alternativeObject = appEntry[u"alternative"_s].toObject();
-                m_alternativeAppName = alternativeObject[u"name"_s].toString(m_appName);
+                m_alternativeAppName = alternativeObject[u"name"_s].toString(m_nativeAppName);
             } else {
                 m_needsAlternativeApp = false;
-                m_alternativeAppName = m_appName;
+                m_alternativeAppName = m_nativeAppName;
             }
 
             if (appEntry.contains(u"desktopLauncher"_s) && appEntry[u"desktopLauncher"_s].isString()) {
@@ -94,7 +94,7 @@ WindowsCompatibilityHelper::WindowsCompatibilityHelper(const QUrl &databaseFileP
 
 QString WindowsCompatibilityHelper::windowTitle() const
 {
-    return i18n("%1 — Windows App Support", m_appName);
+    return nativeAppName();
 }
 
 QString WindowsCompatibilityHelper::heading() const
@@ -112,8 +112,8 @@ QString WindowsCompatibilityHelper::heading() const
 
 QString WindowsCompatibilityHelper::icon() const
 {
-    if (m_hasNativeApp && hasIcon(m_nativeAppRef)) {
-        return m_nativeAppRef;
+    if (hasNativeApp() && hasIcon(nativeAppRef())) {
+        return nativeAppRef();
     }
     return u"application-x-ms-dos-executable"_s;
 }
@@ -125,9 +125,9 @@ QString WindowsCompatibilityHelper::description() const
     if (hasNativeApp()) {
         if (isNativeAppInstalled() && !m_needsAlternativeApp) {
             desc = i18n("A native %1 version of %2 is already installed on your system. ", distroName(), m_alternativeAppName);
-            desc += i18n("It's recommended to use the native version for better performance and integration.");
+            desc += i18n("It's recommended to use the native version for better performance and system integration.");
         } else if (!isNativeAppInstalled() && m_needsAlternativeApp) {
-            desc = i18n("%1, a native %2 alternative to %3, is available for installation. ", m_alternativeAppName, distroName(), m_appName);
+            desc = i18n("%1, a native %2 alternative to %3, is available for installation. ", m_alternativeAppName, distroName(), nativeAppName());
             desc += i18n("Installing the native version is recommended for better performance and system integration.");
         } else {
             desc = i18n("A native %1 version of %2 is available for installation. ", distroName(), m_alternativeAppName);
@@ -152,7 +152,7 @@ QString WindowsCompatibilityHelper::description() const
 
 bool WindowsCompatibilityHelper::isNativeAppInstalled() const
 {
-    return isAppInstalled(m_nativeAppRef);
+    return isAppInstalled(nativeAppRef());
 }
 
 QString WindowsCompatibilityHelper::nativeAppActionText() const
@@ -167,7 +167,7 @@ QString WindowsCompatibilityHelper::nativeAppActionText() const
 QString WindowsCompatibilityHelper::nativeAppActionIcon() const
 {
     if (isNativeAppInstalled()) {
-        return m_nativeAppRef;
+        return nativeAppRef();
     } else {
         return appStoreIcon();
     }
@@ -175,15 +175,15 @@ QString WindowsCompatibilityHelper::nativeAppActionIcon() const
 
 void WindowsCompatibilityHelper::nativeAppAction() const
 {
-    if (!m_hasNativeApp) {
-        qWarning() << "Invalid operation: No native application was found for the provided executable.";
+    if (!hasNativeApp()) {
+        qWarning() << "Invalid operation: No native application was found for the provided Windows executable.";
         return;
     }
 
     if (isNativeAppInstalled()) {
-        openApp(m_nativeAppRef);
+        openApp(nativeAppRef());
     } else {
-        openAppInAppStore(m_nativeAppRef);
+        openAppInAppStore(nativeAppRef());
     }
 }
 

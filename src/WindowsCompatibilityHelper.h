@@ -8,6 +8,7 @@
 #include <QFile>
 #include <QObject>
 #include <QQmlEngine>
+#include <qobject.h>
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -46,10 +47,18 @@ public:
     Q_INVOKABLE void compatibilityToolAction() const override;
 
 private:
-    QString m_appName;
+    QString m_nativeAppName;
     QString m_alternativeAppName;
     QString m_nativeAppRef;
 
+    QString nativeAppName() const override
+    {
+        return m_nativeAppName;
+    }
+    QString nativeAppRef() const override
+    {
+        return m_nativeAppRef;
+    }
     bool isCompatibilityToolInstalled() const override;
     bool isNativeAppInstalled() const override;
 

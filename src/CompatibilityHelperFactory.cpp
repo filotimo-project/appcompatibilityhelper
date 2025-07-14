@@ -2,7 +2,9 @@
 // SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
 
 #include "CompatibilityHelperFactory.h"
+#include "DebCompatibilityHelper.h"
 #include "ICompatibilityHelper.h"
+#include "RpmCompatibilityHelper.h"
 #include "WindowsCompatibilityHelper.h"
 #include "directories.h"
 
@@ -21,6 +23,19 @@ ICompatibilityHelper *CompatibilityHelperFactory::create(const QUrl &filePath)
         return createWindowsCompatibilityHelper(QUrl::fromLocalFile(WINDOWSCOMPATIBILITYHELPER_DB_PATH), filePath);
     }
 
+    if (mimeTypeName == u"application/x-rpm"_s) {
+        return createRpmCompatibilityHelper(filePath);
+    }
+
+    if (mimeTypeName == u"application/vnd.debian.binary-package"_s || mimeTypeName == u"application-x-deb"_s) {
+        return createDebCompatibilityHelper(filePath);
+    }
+
+    // TODO: Create an AppImage compatibility helper.
+    /*if (mimeTypeName == u"application/vnd.appimage"_s || mimeTypeName == u"application/x-iso9660-appimage"_s) {
+        return createAppImageCompatibilityHelper(filePath);
+    }*/
+
     // This returns when no compatible helper was found for the given file type.
     // At this point, the program should exit.
     return nullptr;
@@ -29,4 +44,14 @@ ICompatibilityHelper *CompatibilityHelperFactory::create(const QUrl &filePath)
 ICompatibilityHelper *CompatibilityHelperFactory::createWindowsCompatibilityHelper(const QUrl &databaseFilePath, const QUrl &openedExePath)
 {
     return new WindowsCompatibilityHelper(databaseFilePath, openedExePath);
+}
+
+ICompatibilityHelper *CompatibilityHelperFactory::createRpmCompatibilityHelper(const QUrl &filePath)
+{
+    return new RpmCompatibilityHelper(filePath);
+}
+
+ICompatibilityHelper *CompatibilityHelperFactory::createDebCompatibilityHelper(const QUrl &filePath)
+{
+    return new DebCompatibilityHelper(filePath);
 }

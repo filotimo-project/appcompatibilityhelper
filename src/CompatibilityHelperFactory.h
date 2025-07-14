@@ -14,4 +14,6 @@ public:
 
 private:
     static ICompatibilityHelper *createWindowsCompatibilityHelper(const QUrl &databaseFilePath, const QUrl &openedExePath);
+    static ICompatibilityHelper *createRpmCompatibilityHelper(const QUrl &filePath);
+    static ICompatibilityHelper *createDebCompatibilityHelper(const QUrl &filePath);
 };

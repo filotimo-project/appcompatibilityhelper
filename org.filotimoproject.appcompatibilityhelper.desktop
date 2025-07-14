@@ -9,5 +9,5 @@ Icon=application-x-ms-dos-executable
 Type=Application
 Terminal=false
 NoDisplay=true
-MimeType=application/x-ms-dos-executable;application/x-msi;application/x-ms-shortcut
-# TODO: These are not implemented yet: ;application/x-rpm;application/vnd.debian.binary-package;application/vnd.appimage;application/x-iso9660-appimage
+MimeType=application/x-ms-dos-executable;application/x-msi;application/x-ms-shortcut;application/x-rpm;application/vnd.debian.binary-package
+# TODO: These are not implemented yet: ;application/vnd.appimage;application/x-iso9660-appimage

@@ -15,7 +15,7 @@ Kirigami.ApplicationWindow {
     // This is uniquely moronic, but so is QML.
     // FIXME: In some rare cases, this may clip the content.
     // This looks "good enough", but it would be better to have a proper minimum height determined. Unfortunately, I tried, but QML layouting sucks.
-    minimumHeight: pageContent.Layout.minimumHeight + Kirigami.Units.largeSpacing * 8
+    minimumHeight: pageContent.Layout.minimumHeight + Kirigami.Units.largeSpacing * 10
     height: minimumHeight
     maximumHeight: height
 
