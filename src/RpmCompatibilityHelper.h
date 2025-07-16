@@ -51,6 +51,14 @@ private:
     QString m_nativeAppName;
     QString m_nativeAppRef;
 
+    // Whether a corresponding Flatpak application was found.
+    bool m_hasFlatpakApp = false;
+
+    // Whether the RPM package being opened is an actual application.
+    // This is used to determine if the helper should offer to search Discover or not.
+    // This is set to true if the RPM package has a metainfo file with an application name.
+    bool m_isAnApp = false;
+
     QString nativeAppName() const override;
     QString nativeAppRef() const override;
     bool isCompatibilityToolInstalled() const override

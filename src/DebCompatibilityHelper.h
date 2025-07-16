@@ -44,12 +44,20 @@ public:
     Q_INVOKABLE void compatibilityToolAction() const override
     {
         // Not implemented.
-        qWarning() << "Invalid operation: No compatibility tool action is available for DEB files.";
+        qWarning() << "Invalid operation: No compatibility tool action is available for RPM files.";
     }
 
 private:
     QString m_nativeAppName;
     QString m_nativeAppRef;
+
+    // Whether a corresponding Flatpak application was found.
+    bool m_hasFlatpakApp = false;
+
+    // Whether the DEB package being opened is an actual application.
+    // This is used to determine if the helper should offer to search Discover or not.
+    // This is set to true if the DEB package has a metainfo file with an application name.
+    bool m_isAnApp = false;
 
     QString nativeAppName() const override;
     QString nativeAppRef() const override;

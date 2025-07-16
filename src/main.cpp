@@ -1,7 +1,5 @@
-/*
-    SPDX-License-Identifier: GPL-2.0-or-later
-    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
-*/
+// SPDX-License-Identifier: GPL-2.0-or-later
+// SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
 
 #include <QtGlobal>
 #include <QApplication>
@@ -61,7 +59,7 @@ int main(int argc, char *argv[])
                         u"https://filotimoproject.org/"_s);
     aboutData.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
     KAboutData::setApplicationData(aboutData);
-    QGuiApplication::setWindowIcon(QIcon::fromTheme(u"application-x-ms-dos-executable"_s));
+    QGuiApplication::setWindowIcon(QIcon::fromTheme(u"apper"_s));
 
     QQmlApplicationEngine engine;
 

@@ -101,7 +101,7 @@ QString WindowsCompatibilityHelper::heading() const
 {
     if (hasNativeApp()) {
         if (isNativeAppInstalled()) {
-            return i18n("Open %1 instead", m_alternativeAppName);
+            return i18n("Open the native version of %1 instead", m_alternativeAppName);
         } else {
             return i18n("Install %1 from %2 instead", m_alternativeAppName, appStoreName());
         }

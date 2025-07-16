@@ -39,6 +39,7 @@ find_package(
              Qml
              QuickControls2
              Svg
+             Xml
              ${QT_EXTRA_COMPONENTS})
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS Kirigami CoreAddons
                                                         I18n KIO)

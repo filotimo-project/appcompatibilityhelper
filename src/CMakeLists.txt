@@ -16,6 +16,7 @@ target_sources(appcompatibilityhelper_static PUBLIC
     WindowsCompatibilityHelper.cpp
     RpmCompatibilityHelper.cpp
     DebCompatibilityHelper.cpp
+    PackageUtils.cpp
 )
 
 target_link_libraries(appcompatibilityhelper_static PUBLIC
@@ -26,6 +27,7 @@ target_link_libraries(appcompatibilityhelper_static PUBLIC
     Qt6::QuickControls2
     Qt6::Svg
     Qt6::Widgets
+    Qt6::Xml
     KF6::I18n
     KF6::CoreAddons
     KF6::KIOCore
