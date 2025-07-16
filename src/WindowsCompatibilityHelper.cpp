@@ -134,17 +134,19 @@ QString WindowsCompatibilityHelper::description() const
             desc += i18n("Installing the native version is recommended for better performance and system integration.");
         }
     } else {
-        desc = i18n("No native %1 alternative was found for this Windows application. ", distroName());
-        desc += i18n("You can search for alternatives online or in %1.", appStoreName());
+        desc = i18n("You can search for alternatives online or in %1.", appStoreName());
     }
 
     if (hasCompatibilityTool()) {
         desc += u"<br><br>"_s;
         if (isCompatibilityToolInstalled()) {
-            desc += i18n("Alternatively, you can run the Windows version using Bottles.");
+            desc += i18n("Alternatively, you can run the Windows version using Bottles. ");
         } else {
-            desc += i18n("Alternatively, you can install Bottles to run Windows applications.");
+            desc += i18n("Alternatively, you can install Bottles to run Windows applications. ");
         }
+        desc += i18n(
+            "This is not recommended for most users, as running Windows applications through a compatibility layer can have bugs, poor performance, and poor "
+            "system integration.");
     }
 
     return desc;

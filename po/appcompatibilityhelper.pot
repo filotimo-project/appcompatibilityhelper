@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Appcompatibilityhelper 0.10\n"
 "Report-Msgid-Bugs-To: https://github.com/filotimo-project/appcompatibilityhelper \n"
 "appcompatibilityhelper\n"
-"POT-Creation-Date: 2025-07-16 08:18+0000\n"
+"POT-Creation-Date: 2025-07-16 08:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,14 +45,14 @@ msgstr ""
 msgid "A native %1 version of %2 may be available for installation from %3. "
 msgstr ""
 
-#: src/WindowsCompatibilityHelper.cpp:146
+#: src/WindowsCompatibilityHelper.cpp:145
 #, kde-format
-msgid "Alternatively, you can install Bottles to run Windows applications."
+msgid "Alternatively, you can install Bottles to run Windows applications. "
 msgstr ""
 
-#: src/WindowsCompatibilityHelper.cpp:144
+#: src/WindowsCompatibilityHelper.cpp:143
 #, kde-format
-msgid "Alternatively, you can run the Windows version using Bottles."
+msgid "Alternatively, you can run the Windows version using Bottles. "
 msgstr ""
 
 #: src/DebCompatibilityHelper.cpp:126
@@ -150,11 +150,6 @@ msgctxt "@info:credit"
 msgid "Maintainer"
 msgstr ""
 
-#: src/WindowsCompatibilityHelper.cpp:137
-#, kde-format
-msgid "No native %1 alternative was found for this Windows application. "
-msgstr ""
-
 #: src/DebCompatibilityHelper.cpp:157 src/RpmCompatibilityHelper.cpp:151
 #: src/WindowsCompatibilityHelper.cpp:161
 #, kde-format
@@ -206,6 +201,14 @@ msgid ""
 "setup."
 msgstr ""
 
+#: src/WindowsCompatibilityHelper.cpp:147
+#, kde-format
+msgid ""
+"This is not recommended for most users, as running Windows applications "
+"through a compatibility layer can have bugs, poor performance, and poor "
+"system integration."
+msgstr ""
+
 #: src/main.cpp:56
 #, kde-format
 msgctxt "@info:credit"
@@ -218,7 +221,7 @@ msgid "Windows applications are not natively supported on %1"
 msgstr ""
 
 #: src/DebCompatibilityHelper.cpp:122 src/RpmCompatibilityHelper.cpp:116
-#: src/WindowsCompatibilityHelper.cpp:138
+#: src/WindowsCompatibilityHelper.cpp:137
 #, kde-format
 msgid "You can search for alternatives online or in %1."
 msgstr ""
