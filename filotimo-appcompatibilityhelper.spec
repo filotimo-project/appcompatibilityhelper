@@ -60,6 +60,9 @@ desktop-file-validate %{buildroot}%{_kf6_datadir}/applications/org.filotimoproje
 %{_kf6_datadir}/appcompatibilityhelper/app_db.json
 
 %changelog
+* Wed Jul 16 2025 Thomas Duckworth <tduck@filotimoproject.org> 0.10-2
+- fix: pull proper dependencies (tduck@filotimoproject.org)
+
 * Wed Jul 16 2025 Thomas Duckworth <tduck@filotimoproject.org> 0.10-1
 - new package built with tito
 
