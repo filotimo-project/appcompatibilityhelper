@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Appcompatibilityhelper 0.10\n"
 "Report-Msgid-Bugs-To: https://github.com/filotimo-project/appcompatibilityhelper \n"
 "appcompatibilityhelper\n"
-"POT-Creation-Date: 2025-07-16 08:55+0000\n"
+"POT-Creation-Date: 2025-07-16 12:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,7 +95,7 @@ msgid "Discover"
 msgstr ""
 
 #: src/DebCompatibilityHelper.cpp:159 src/RpmCompatibilityHelper.cpp:153
-#: src/WindowsCompatibilityHelper.cpp:163
+#: src/WindowsCompatibilityHelper.cpp:165
 #, kde-format
 msgid "Install %1"
 msgstr ""
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Install %1 from %2 instead"
 msgstr ""
 
-#: src/WindowsCompatibilityHelper.cpp:201
+#: src/WindowsCompatibilityHelper.cpp:203
 #, kde-format
 msgid "Install Bottles"
 msgstr ""
@@ -139,7 +139,7 @@ msgid ""
 "It's recommended to use the native version for better system integration."
 msgstr ""
 
-#: src/ICompatibilityHelper.cpp:68 src/ICompatibilityHelper.cpp:90
+#: src/ICompatibilityHelper.cpp:71 src/ICompatibilityHelper.cpp:93
 #, kde-format
 msgid "Linux"
 msgstr ""
@@ -151,7 +151,7 @@ msgid "Maintainer"
 msgstr ""
 
 #: src/DebCompatibilityHelper.cpp:157 src/RpmCompatibilityHelper.cpp:151
-#: src/WindowsCompatibilityHelper.cpp:161
+#: src/WindowsCompatibilityHelper.cpp:163
 #, kde-format
 msgid "Open %1"
 msgstr ""
@@ -179,7 +179,7 @@ msgstr ""
 msgid "RPM packages are not natively supported on %1"
 msgstr ""
 
-#: src/WindowsCompatibilityHelper.cpp:199
+#: src/WindowsCompatibilityHelper.cpp:201
 #, kde-format
 msgid "Run with Bottles"
 msgstr ""
@@ -201,7 +201,7 @@ msgid ""
 "setup."
 msgstr ""
 
-#: src/WindowsCompatibilityHelper.cpp:147
+#: src/WindowsCompatibilityHelper.cpp:148
 #, kde-format
 msgid ""
 "This is not recommended for most users, as running Windows applications "

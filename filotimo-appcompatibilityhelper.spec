@@ -1,5 +1,5 @@
 Name:          filotimo-appcompatibilityhelper
-Version:       0.11
+Version:       0.12
 Release:       1%{?dist}
 License:       GPL-2.0-or-later
 Summary:       Provides support for running or finding alternatives to certain package types on ublue-based distributions.

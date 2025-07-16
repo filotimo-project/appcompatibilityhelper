@@ -59,35 +59,39 @@ void ICompatibilityHelper::openWithAction() const
 
 QString ICompatibilityHelper::distroName() const
 {
-    QFile file(u"/etc/os-release"_s);
+    static QString distroName = []() {
+        QFile file(u"/etc/os-release"_s);
 
-    // Check if the file can be opened for reading
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qWarning() << "Could not open /etc/os-release.";
+        // Check if the file can be opened for reading
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            qWarning() << "Could not open /etc/os-release.";
+            qWarning() << "The distro name could not be determined from /etc/os-release. Defaulting to \"Linux\".";
+            return i18n("Linux"); // Default to "Linux".
+        }
+
+        QTextStream in(&file);
+        while (!in.atEnd()) {
+            QString line = in.readLine();
+            if (line.startsWith(u"NAME="_s)) {
+                QString distroName = line.section(u"="_s, 1, 1); // Get the part after the '='
+
+                // Remove surrounding quotes if they exist
+                if (distroName.startsWith(u"\""_s) && distroName.endsWith(u"\""_s)) {
+                    distroName = distroName.mid(1, distroName.length() - 2);
+                }
+
+                file.close();
+                return distroName;
+            }
+        }
+
+        file.close();
+
         qWarning() << "The distro name could not be determined from /etc/os-release. Defaulting to \"Linux\".";
         return i18n("Linux"); // Default to "Linux".
-    }
+    }();
 
-    QTextStream in(&file);
-    while (!in.atEnd()) {
-        QString line = in.readLine();
-        if (line.startsWith(u"NAME="_s)) {
-            QString distroName = line.section(u"="_s, 1, 1); // Get the part after the '='
-
-            // Remove surrounding quotes if they exist
-            if (distroName.startsWith(u"\""_s) && distroName.endsWith(u"\""_s)) {
-                distroName = distroName.mid(1, distroName.length() - 2);
-            }
-
-            file.close();
-            return distroName;
-        }
-    }
-
-    file.close();
-
-    qWarning() << "The distro name could not be determined from /etc/os-release. Defaulting to \"Linux\".";
-    return i18n("Linux"); // Default to "Linux".
+    return distroName;
 }
 
 bool ICompatibilityHelper::hasIcon(const QString &ref) const
