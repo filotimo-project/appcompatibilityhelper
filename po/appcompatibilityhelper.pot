@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Appcompatibilityhelper 0.10\n"
 "Report-Msgid-Bugs-To: https://github.com/filotimo-project/appcompatibilityhelper \n"
 "appcompatibilityhelper\n"
-"POT-Creation-Date: 2025-07-16 12:01+0000\n"
+"POT-Creation-Date: 2025-07-19 05:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -139,7 +139,7 @@ msgid ""
 "It's recommended to use the native version for better system integration."
 msgstr ""
 
-#: src/ICompatibilityHelper.cpp:71 src/ICompatibilityHelper.cpp:93
+#: src/ICompatibilityHelper.cpp:69 src/ICompatibilityHelper.cpp:91
 #, kde-format
 msgid "Linux"
 msgstr ""

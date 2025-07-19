@@ -55,7 +55,9 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/directories.h.in
 
 # i18n
 # https://techbase.kde.org/Development/Tutorials/Localization/i18n_Build_Systems/Outside_KDE_repositories
+set(TRANSLATION_TARGET_NAME ${PROJECT_NAME})
 add_subdirectory(po)
+ki18n_install(po)
 
 # Install desktop file -- internationalization function can be seen in po/CMakeLists.txt
 install_i18n_desktop_file(${CMAKE_SOURCE_DIR}/org.filotimoproject.appcompatibilityhelper.desktop ${KDE_INSTALL_APPDIR})
@@ -65,5 +67,3 @@ feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAG
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES src/*.cpp src/*.h)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
-
-ki18n_install(KF_SKIP_PO_PROCESSING po)
