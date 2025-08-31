@@ -3,6 +3,7 @@
 
 BASEDIR=`pwd`	# root of translatable sources
 PROJECT=$(grep -Po '(?<=project\()\w+' CMakeLists.txt) # project name
+POTFILE_NAME="plasma_runner_${PROJECT}"
 PROJECT_UPPER="$(tr '[:lower:]' '[:upper:]' <<< ${PROJECT:0:1})${PROJECT:1}" # uppercased project name
 BUGADDR="https://github.com/filotimo-project/${PROJECT}"	# MSGID-Bugs
 WDIR="`pwd`/po"		# working dir

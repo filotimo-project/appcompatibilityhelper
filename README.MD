@@ -9,13 +9,29 @@ Extensible for any mimetype - just implement `ICompatibilityHelper` and add a ca
 
 # Build Instructions
 
-In a container:
+### In a container
+To build this inside a container, you can run
 ```bash
 just build
 just install
 ```
 
-Or, assuming you have a KDE development environment container set up that you can log in to the session for, you can build and install this with the following:
+### Outside a container
+
+Dependencies can be installed with:
+```
+sudo dnf install rpmspec ninja-build clang
+sudo dnf builddep ./filotimo-atychia.spec
+sudo dnf install $(rpmspec -q --requires ./filotimo-atychia.spec | xargs)
+```
+(this must be run wherever you're building and installing this, e.g. in a KDE development environment Distrobox)
+
+Assuming you have a KDE development environment set up that you can log in to the session for, you can build and install this with the following:
 ```
 cmake -B build/ -DCMAKE_INSTALL_PREFIX=~/kde/usr && cmake --build build/ -v && cmake --install build/
+```
+
+Otherwise, you can run:
+```
+cmake -B build/ -DCMAKE_INSTALL_PREFIX=/usr && cmake --build build/ -v && sudo cmake --install build/
 ```
