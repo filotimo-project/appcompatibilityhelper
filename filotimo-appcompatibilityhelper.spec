@@ -1,5 +1,5 @@
 Name:          filotimo-appcompatibilityhelper
-Version:       0.12
+Version:       0.13
 Release:       1%{?dist}
 License:       GPL-2.0-or-later
 Summary:       Provides support for running or finding alternatives to certain package types on ublue-based distributions.
@@ -60,6 +60,11 @@ desktop-file-validate %{buildroot}%{_kf6_datadir}/applications/org.filotimoproje
 %{_kf6_datadir}/appcompatibilityhelper/app_db.json
 
 %changelog
+* Mon Sep 29 2025 Thomas Duckworth <tduck@filotimoproject.org> 0.13-1
+- chore: update app_db.json (tduck@filotimoproject.org)
+- chore: update readme (tduck@filotimoproject.org)
+- fix: get i18n to work (tduck@filotimoproject.org)
+
 * Wed Jul 16 2025 Thomas Duckworth <tduck@filotimoproject.org> 0.12-1
 - fix: ensure os-release is only read once (tduck@filotimoproject.org)
 
