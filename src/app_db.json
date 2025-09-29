@@ -278,10 +278,10 @@
             "windows": "flstudio.*.exe"
         },
         "name": "FL Studio",
-        "flatpak": { "remote": "flathub", "id": "io.lmms.LMMS" },
-        "desktopLauncher": "lmms.desktop",
+        "flatpak": { "remote": "flathub", "id": "org.ardour.Ardour" },
+        "desktopLauncher": "ardour.desktop",
         "alternative": {
-            "name": "LMMS"
+            "name": "Ardour"
         }
     },
     {
@@ -376,6 +376,47 @@
     },
     {
         "regex": {
+            "windows": "antimicro.*.win64.*.msi"
+        },
+        "name": "AntiMicro",
+        "desktopLauncher": "qjoypad.desktop",
+        "alternative": {
+            "name": "QJoypad"
+        }
+    },
+    {
+        "regex": {
+            "windows": "xpadder.*.exe"
+        },
+        "name": "Xpadder",
+        "desktopLauncher": "qjoypad.desktop",
+        "alternative": {
+            "name": "QJoypad"
+        }
+    },
+    {
+        "regex": {
+            "windows": "gimp.*.setup.*.(exe|msi)",
+            "linux": "gimp.*"
+        },
+        "name": "GNU Image Manipulation Program",
+        "apt": "gimp",
+        "flatpak": { "remote": "flathub", "id": "org.gimp.GIMP" },
+        "desktopLauncher": "gimp.desktop"
+    },
+    {
+        "regex": {
+            "windows": "creative.*.cloud.*.set-up.*.(exe|msi)"
+        },
+        "name": "Adobe Creative Cloud",
+        "webLink": { "href": "https://www.adobe.com/apps/all/web" },
+        "mainMessage": "You can use some Adobe apps on the web",
+        "alternative": {
+            "name": "Adobe Creative Cloud on the web"
+        }
+    },
+    {
+        "regex": {
             "windows": "affinity-photo.*.exe"
         },
         "name": "Affinity Photo",
@@ -440,6 +481,14 @@
         "name": "WhatsApp",
         "webLink": { "href": "https://web.whatsapp.com/" },
         "mainMessage": "You can use WhatsApp on the web"
+    },
+    {
+        "regex": {
+            "windows": "lineinst.*.exe"
+        },
+        "name": "LINE",
+        "webLink": { "href": "https://chrome.google.com/webstore/detail/line/ophjlpahpchlmihnnnihgmmeilfjmjjc" },
+        "mainMessage": "You can use LINE as a web browser extension"
     },
     {
         "regex": {
@@ -628,7 +677,7 @@
     },
     {
         "regex": {
-            "windows": "tsetup.*.exe"
+            "windows": "(tsetup|telegram).*.exe"
         },
         "name": "Telegram",
         "flatpak": { "remote": "flathub", "id": "org.telegram.desktop" },
@@ -749,6 +798,40 @@
         "name": "PuTTY",
         "flatpak": { "remote": "flathub", "id": "uk.org.greenend.chiark.sgtatham.putty" },
         "desktopLauncher": "uk.org.greenend.chiark.sgtatham.putty.desktop"
+    },
+    {
+        "regex": {
+            "windows": "bvsshclient-inst.(exe|msi)"
+        },
+        "name": "Bitvise",
+        "flatpak": { "remote": "flathub", "id": "uk.org.greenend.chiark.sgtatham.putty" },
+        "desktopLauncher": "uk.org.greenend.chiark.sgtatham.putty.desktop",
+        "alternative": {
+            "name": "PuTTY"
+        }
+    },
+    {
+        "regex": {
+            "windows": "xampp-windows(.*.installer|).*.(exe|msi)"
+        },
+        "name": "XAMPP website",
+        "webLink": { "href": "https://www.apachefriends.org/download.html" },
+        "mainMessage": "You can download XAMPP (Linux .run package) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "wireshark.*.(exe|msi)"
+        },
+        "name": "Wireshark",
+        "desktopLauncher": "org.wireshark.Wireshark.desktop",
+        "apt": "wireshark"
+    },
+    {
+        "regex": {
+            "windows": "nmap.*.setup.*.(exe|msi)"
+        },
+        "name": "Nmap",
+        "apt": "nmap"
     },
     {
         "regex": {
@@ -994,8 +1077,11 @@
             "windows": ".*flash.*player.*.exe",
             "linux": "flash-player.*"
         },
-        "mainMessage": "Flash Player is no longer supported",
-        "noButton": true
+        "name": "Adobe Flash Player",
+        "flatpak": { "remote": "flathub", "id": "rs.ruffle.Ruffle" },
+        "alternative": {
+            "name": "Ruffle"
+        }
     },
     {
         "regex": {
@@ -1369,6 +1455,66 @@
     },
     {
         "regex": {
+            "windows": "officesetup.*.(exe|msi)"
+        },
+        "name": "Microsoft Office",
+        "webLink": { "href": "https://www.office.com" },
+        "mainMessage": "You can use either LibreOffice (pre-installed in Zorin OS) or Microsoft Office/365 on the web",
+        "alternative": {
+            "name": "Microsoft Office/365 on the web"
+        }
+    },
+    {
+        "regex": {
+            "windows": "(msteamssetup|teams.*.windows).*.(exe|msi)"
+        },
+        "name": "Microsoft Teams",
+        "webLink": { "href": "https://teams.microsoft.com/" },
+        "mainMessage": "You can use Microsoft Teams on the web"
+    },
+    {
+        "regex": {
+            "windows": "webex.*.(exe|msi)"
+        },
+        "name": "Cisco Webex website",
+        "webLink": { "href": "https://www.webex.com/downloads.html" },
+        "mainMessage": "You can install Cisco Webex (Linux .deb package) for Zorin OS from the web"
+    },
+    {
+        "regex": {
+            "windows": "finaldraftsetup.*.(exe|msi)"
+        },
+        "name": "FinalDraft",
+        "flatpak": { "remote": "flathub", "id": "org.trelby.Trelby" },
+        "desktopLauncher": "trelby.desktop",
+        "alternative": {
+            "name": "Trelby"
+        }
+    },
+    {
+        "regex": {
+            "windows": "scrivener.*.installer.*.(exe|msi)"
+        },
+        "name": "Scrivener",
+        "flatpak": { "remote": "flathub", "id": "org.trelby.Trelby" },
+        "desktopLauncher": "trelby.desktop",
+        "alternative": {
+            "name": "Trelby"
+        }
+    },
+    {
+        "regex": {
+            "windows": "iawriter.*.(exe|msi)"
+        },
+        "name": "iA Writer",
+        "flatpak": { "remote": "flathub", "id": "org.gnome.gitlab.somas.Apostrophe" },
+        "desktopLauncher": "org.gnome.gitlab.somas.Apostrophe.desktop",
+        "alternative": {
+            "name": "Apostrophe"
+        }
+    },
+    {
+        "regex": {
             "windows": "virtualbox.*.win.exe"
         },
         "name": "VirtualBox",
@@ -1396,6 +1542,14 @@
     },
     {
         "regex": {
+            "windows": "citrixworkspace.*.exe"
+        },
+        "name": "Citrix website",
+        "webLink": { "href": "https://www.citrix.com/downloads/workspace-app/linux/workspace-app-for-linux-latest.html" },
+        "mainMessage": "You can download Citrix Workspace (.deb package) for Zorin OS from the web"
+    },
+    {
+        "regex": {
             "windows": "(windows.*(setup|install)|mediacreationtool).*.exe"
         },
         "name": "Microsoft Windows",
@@ -1405,13 +1559,5 @@
         "alternative": {
             "name": "GNOME Boxes"
         }
-   },
-    {
-        "regex": {
-            "windows": "citrixworkspace.*.exe"
-        },
-        "name": "Citrix website",
-        "webLink": { "href": "https://www.citrix.com/downloads/workspace-app/linux/workspace-app-for-linux-latest.html" },
-        "mainMessage": "You can download Citrix Workspace (.deb package) for Zorin OS from the web"
    }
 ]
